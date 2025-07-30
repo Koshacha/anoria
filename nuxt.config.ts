@@ -10,9 +10,15 @@ export default defineNuxtConfig({
     "@nuxt/image",
     "@nuxt/scripts",
     "@nuxtjs/tailwindcss",
-    "motion-v/nuxt",
     // 'nuxt-mongoose'
+    "motion-v/nuxt",
+    "vue3-carousel-nuxt",
+    "@vee-validate/nuxt"
   ],
+
+  carousel: {
+    prefix: "nuxt",
+  },
 
   fonts: {
     families: [

@@ -4,4 +4,6 @@ export default defineAppConfig({
     email: "anvoria@mail.ru",
     address: "Хабаровск, ул. Тургенева 96, корп 1, 18",
   },
+
+  baseDate: "2025-07-28",
 });
