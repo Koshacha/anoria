@@ -42,13 +42,13 @@ onUnmounted(() => {
       >
         <motion.div
           v-if="open"
-          class="modal relative w-full max-w-lg rounded-lg bg-white p-6 shadow-lg sm:p-8"
+          class="modal relative w-full max-w-lg rounded-lg bg-white p-6 pt-0 shadow-lg sm:p-8 max-md:max-h-[90svh] overflow-y-auto"
           :initial="{ opacity: 0, scale: 0.95 }"
           :animate="{ opacity: 1, scale: 1 }"
           :exit="{ opacity: 0, scale: 0.95 }"
           :transition="{ duration: 0.3, ease: 'easeInOut' }"
         >
-          <div class="flex items-start justify-between">
+          <div class="flex items-start justify-between py-4 sticky top-0 bg-white/80 backdrop-blur">
             <h3 class="text-xl font-semibold text-graphite-navy">
               <slot name="title" />
             </h3>
@@ -59,7 +59,7 @@ onUnmounted(() => {
               <Icon name="i-heroicons-x-mark" class="h-6 w-6" />
             </button>
           </div>
-          <div class="mt-4">
+          <div class="mt-4 overflow-y-auto">
             <slot name="content" />
           </div>
         </motion.div>

@@ -14,4 +14,8 @@
   a {
     @apply text-ocean-indigo;
   }
+
+  body:has(.modal, .mobile-menu) {
+    @apply overflow-hidden;
+  }
 }

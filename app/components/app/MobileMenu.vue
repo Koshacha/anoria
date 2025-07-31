@@ -33,7 +33,7 @@ const closeMenu = () => {
     <AnimatePresence>
       <motion.div
         v-if="isOpen"
-        class="fixed top-0 right-0 h-[100dvh] w-full max-w-xs bg-white shadow-lg z-50 p-6 flex flex-col"
+        class="mobile-menu fixed top-0 right-0 h-[100dvh] w-full max-w-xs bg-white shadow-lg z-50 p-6 flex flex-col"
         :initial="{ x: '100%' }"
         :animate="{ x: 0 }"
         :exit="{ x: '100%' }"
