@@ -9,6 +9,26 @@
         <template #description>
           Создаем и настраиваем чат-боты под ваш бизнес.
         </template>
+
+        <template #cta>
+          <form-modal>
+            <template #default="{ openModal }">
+              <app-button @click="openModal()"> Оставить заявку </app-button>
+            </template>
+          </form-modal>
+        </template>
+
+        <template #right>
+          <section-why-us
+            :reasons="[
+              'Опытные операторы',
+              'Быстрый старт работы',
+              'Контроль качества',
+            ]"
+          >
+            <template #title>Почему мы?</template>
+          </section-why-us>
+        </template>
       </section-hero-1>
 
       <section-services
@@ -30,16 +50,6 @@
           },
         ]"
       />
-
-      <section-why-us
-        :reasons="[
-          'Опытные операторы',
-          'Быстрый старт работы',
-          'Контроль качества',
-        ]"
-      >
-        <template #title>Почему мы?</template>
-      </section-why-us>
 
       <section-steps
         :steps="[

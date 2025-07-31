@@ -12,12 +12,10 @@ defineProps<{
 <template>
   <section class="py-20">
     <div class="container px-4 mx-auto">
-      <div class="max-w-2xl mx-auto mb-16 text-center">
-        <span class="font-bold tracking-wider uppercase text-primary"
-          >Цены</span
-        >
-        <h2 class="text-4xl font-bold lg:text-5xl">Наши тарифы</h2>
-      </div>
+      <app-heading>
+        <template #chip>Цены</template>
+        Наши тарифы
+      </app-heading>
       <div class="flex flex-wrap items-stretch -mx-4">
         <div
           v-for="(tariff, index) in tariffs"

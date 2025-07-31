@@ -6,17 +6,27 @@
           ><fancy-word class="text-primary">Колл-центр</fancy-word></template
         >
         <template #description> Аутсорсинг звонков для компаний. </template>
-      </section-hero-1>
 
-      <section-why-us
-        :reasons="[
-          'Опытные операторы',
-          'Быстрый старт работы',
-          'Контроль качества',
-        ]"
-      >
-        <template #title>Почему мы?</template>
-      </section-why-us>
+        <template #cta>
+          <form-modal>
+            <template #default="{ openModal }">
+              <app-button @click="openModal()"> Оставить заявку </app-button>
+            </template>
+          </form-modal>
+        </template>
+
+        <template #right>
+          <section-why-us
+            :reasons="[
+              'Опытные операторы',
+              'Быстрый старт работы',
+              'Контроль качества',
+            ]"
+          >
+            <template #title>Почему мы?</template>
+          </section-why-us>
+        </template>
+      </section-hero-1>
 
       <section-steps
         :steps="[

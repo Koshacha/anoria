@@ -4,14 +4,10 @@ const { contacts } = useAppConfig();
 
 <template>
   <section class="max-w-6xl mx-auto">
-    <div class="text-center mb-16">
-      <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
-        Оставить заявку
-      </h1>
-      <p class="text-lg text-gray-600 max-w-2xl mx-auto">
-        Хотите обсудить ваш кейс?
-      </p>
-    </div>
+    <app-heading>
+      <template #subtitle>Хотите обсудить ваш кейс?</template>
+      Оставить заявку
+    </app-heading>
 
     <div class="rounded-2xl p-8 border border-gray-200 relative">
       <div
