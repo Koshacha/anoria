@@ -1,190 +1,73 @@
+<script setup lang="ts">
+const { contacts } = useAppConfig();
+</script>
+
 <template>
-  <div class="isolate bg-white px-6 py-24 sm:py-32 lg:px-8">
-    <div
-      class="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
-      aria-hidden="true"
-    >
-      <div
-        class="relative left-1/2 -z-10 aspect-1155/678 w-144.5 max-w-none -translate-x-1/2 rotate-30 bg-linear-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%-40rem)] sm:w-288.75"
-        style="
-          clip-path: polygon(
-            74.1% 44.1%,
-            100% 61.6%,
-            97.5% 26.9%,
-            85.5% 0.1%,
-            80.7% 2%,
-            72.5% 32.5%,
-            60.2% 62.4%,
-            52.4% 68.1%,
-            47.5% 58.3%,
-            45.2% 34.5%,
-            27.5% 76.7%,
-            0.1% 64.9%,
-            17.9% 100%,
-            27.6% 76.8%,
-            76.1% 97.7%,
-            74.1% 44.1%
-          );
-        "
-      />
-    </div>
-    <div class="mx-auto max-w-2xl text-center">
-      <h2
-        class="text-4xl font-semibold tracking-tight text-balance text-gray-900 sm:text-5xl"
-      >
-        Contact sales
-      </h2>
-      <p class="mt-2 text-lg/8 text-gray-600">
-        Aute magna irure deserunt veniam aliqua magna enim voluptate.
+  <section class="max-w-6xl mx-auto">
+    <div class="text-center mb-16">
+      <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
+        Оставить заявку
+      </h1>
+      <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+        Хотите обсудить ваш кейс?
       </p>
     </div>
-    <form action="#" method="POST" class="mx-auto mt-16 max-w-xl sm:mt-20">
-      <div class="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
-        <div>
-          <label
-            for="first-name"
-            class="block text-sm/6 font-semibold text-gray-900"
-            >First name</label
-          >
-          <div class="mt-2.5">
-            <input
-              type="text"
-              name="first-name"
-              id="first-name"
-              autocomplete="given-name"
-              class="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600"
-            />
-          </div>
-        </div>
-        <div>
-          <label
-            for="last-name"
-            class="block text-sm/6 font-semibold text-gray-900"
-            >Last name</label
-          >
-          <div class="mt-2.5">
-            <input
-              type="text"
-              name="last-name"
-              id="last-name"
-              autocomplete="family-name"
-              class="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600"
-            />
-          </div>
-        </div>
-        <div class="sm:col-span-2">
-          <label
-            for="company"
-            class="block text-sm/6 font-semibold text-gray-900"
-            >Company</label
-          >
-          <div class="mt-2.5">
-            <input
-              type="text"
-              name="company"
-              id="company"
-              autocomplete="organization"
-              class="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600"
-            />
-          </div>
-        </div>
-        <div class="sm:col-span-2">
-          <label for="email" class="block text-sm/6 font-semibold text-gray-900"
-            >Email</label
-          >
-          <div class="mt-2.5">
-            <input
-              type="email"
-              name="email"
-              id="email"
-              autocomplete="email"
-              class="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600"
-            />
-          </div>
-        </div>
-        <div class="sm:col-span-2">
-          <label
-            for="phone-number"
-            class="block text-sm/6 font-semibold text-gray-900"
-            >Phone number</label
-          >
-          <div class="mt-2.5">
-            <div
-              class="flex rounded-md bg-white outline-1 -outline-offset-1 outline-gray-300 has-[input:focus-within]:outline-2 has-[input:focus-within]:-outline-offset-2 has-[input:focus-within]:outline-indigo-600"
-            >
-              <div class="grid shrink-0 grid-cols-1 focus-within:relative">
-                <select
-                  id="country"
-                  name="country"
-                  autocomplete="country"
-                  aria-label="Country"
-                  class="col-start-1 row-start-1 w-full appearance-none rounded-md py-2 pr-7 pl-3.5 text-base text-gray-500 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6"
-                >
-                  <option>US</option>
-                  <option>CA</option>
-                  <option>EU</option>
-                </select>
-                <!-- <ChevronDownIcon class="pointer-events-none col-start-1 row-start-1 mr-2 size-5 self-center justify-self-end text-gray-500 sm:size-4" aria-hidden="true" /> -->
+
+    <div class="rounded-2xl p-8 border border-gray-200 relative">
+      <div
+        class="arrow absolute top-0 right-0 translate-x-20 -translate-y-10 w-96 h-96"
+      >
+        {{ " " }}
+      </div>
+      <div class="grid lg:grid-cols-2 gap-12">
+        <div class="contacts-card rounded-2xl shadow-sm p-8 text-white">
+          <h2 class="text-2xl font-bold mb-6">Контакты для связи</h2>
+
+          <div class="space-y-6">
+            <div class="flex items-center">
+              <div class="w-6 h-6 mr-4 flex-shrink-0">
+                <icon name="lucide:phone" class="w-6 h-6" />
               </div>
-              <input
-                type="text"
-                name="phone-number"
-                id="phone-number"
-                class="block min-w-0 grow py-1.5 pr-3 pl-1 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm/6"
-                placeholder="123-456-7890"
-              />
+              <span class="text-lg">{{ contacts.phone }}</span>
+            </div>
+
+            <div class="flex items-center">
+              <div class="w-6 h-6 mr-4 flex-shrink-0">
+                <icon name="lucide:mail" class="w-6 h-6" />
+              </div>
+              <span class="text-lg">{{ contacts.email }}</span>
+            </div>
+
+            <div class="flex items-start">
+              <div class="w-6 h-6 mr-4 flex-shrink-0 mt-1">
+                <icon name="lucide:map" class="w-6 h-6" />
+              </div>
+              <div>
+                <span class="text-lg">{{ contacts.address }}</span>
+              </div>
             </div>
           </div>
         </div>
-        <div class="sm:col-span-2">
-          <label
-            for="message"
-            class="block text-sm/6 font-semibold text-gray-900"
-            >Message</label
-          >
-          <div class="mt-2.5">
-            <textarea
-              name="message"
-              id="message"
-              rows="4"
-              class="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600"
-            />
-          </div>
-        </div>
-        <div class="flex gap-x-4 sm:col-span-2">
-          <div class="flex h-6 items-center">
-            <div
-              class="group relative inline-flex w-8 shrink-0 rounded-full bg-gray-200 p-px inset-ring inset-ring-gray-900/5 outline-offset-2 outline-indigo-600 transition-colors duration-200 ease-in-out has-checked:bg-indigo-600 has-focus-visible:outline-2"
-            >
-              <span
-                class="size-4 rounded-full bg-white shadow-xs ring-1 ring-gray-900/5 transition-transform duration-200 ease-in-out group-has-checked:translate-x-3.5"
-              />
-              <input
-                type="checkbox"
-                class="absolute inset-0 appearance-none focus:outline-hidden"
-                aria-label="Agree to policies"
-                id="agree-to-policies"
-                name="agree-to-policies"
-              />
-            </div>
-          </div>
-          <label class="text-sm/6 text-gray-600" for="agree-to-policies">
-            By selecting this, you agree to our
-            {{ " " }}
-            <a href="#" class="font-semibold whitespace-nowrap text-indigo-600"
-              >privacy policy</a
-            >.
-          </label>
-        </div>
+
+        <form-contact />
       </div>
-      <div class="mt-10">
-        <button
-          type="submit"
-          class="block w-full rounded-md bg-indigo-600 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-        >
-          Let's talk
-        </button>
-      </div>
-    </form>
-  </div>
+    </div>
+  </section>
 </template>
+
+<style scoped>
+.contacts-card {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.dev/svgjs' viewBox='0 0 700 700' width='700' height='700'%3E%3Cdefs%3E%3ClinearGradient gradientTransform='rotate(150, 0.5, 0.5)' x1='50%25' y1='0%25' x2='50%25' y2='100%25' id='ffflux-gradient'%3E%3Cstop stop-color='hsl(216, 100%25, 72%25)' stop-opacity='1' offset='0%25'%3E%3C/stop%3E%3Cstop stop-color='hsl(227, 100%25, 50%25)' stop-opacity='1' offset='100%25'%3E%3C/stop%3E%3C/linearGradient%3E%3Cfilter id='ffflux-filter' x='-20%25' y='-20%25' width='140%25' height='140%25' filterUnits='objectBoundingBox' primitiveUnits='userSpaceOnUse' color-interpolation-filters='sRGB'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.005 0.003' numOctaves='2' seed='5' stitchTiles='stitch' x='0%25' y='0%25' width='100%25' height='100%25' result='turbulence'%3E%3C/feTurbulence%3E%3CfeGaussianBlur stdDeviation='20 0' x='0%25' y='0%25' width='100%25' height='100%25' in='turbulence' edgeMode='duplicate' result='blur'%3E%3C/feGaussianBlur%3E%3CfeBlend mode='color-burn' x='0%25' y='0%25' width='100%25' height='100%25' in='SourceGraphic' in2='blur' result='blend'%3E%3C/feBlend%3E%3C/filter%3E%3C/defs%3E%3Crect width='700' height='700' fill='url(%23ffflux-gradient)' filter='url(%23ffflux-filter)'%3E%3C/rect%3E%3C/svg%3E");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.arrow {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.dev/svgjs' viewBox='0 0 800 800'%3E%3Cg stroke-width='6' stroke='hsl(227, 71%25, 57%25)' fill='none' stroke-linecap='round' stroke-linejoin='round' transform='matrix(1,0,0,1,190,-283)'%3E%3Cpath d='M208.6490020751953 290.5Q841.6490020751953 374.5 427.6490020751953 509.5 ' marker-end='url(%23SvgjsMarker1764)'%3E%3C/path%3E%3C/g%3E%3Cdefs%3E%3Cmarker markerWidth='10' markerHeight='10' refX='5' refY='5' viewBox='0 0 10 10' orient='auto' id='SvgjsMarker1764'%3E%3Cpolyline points='0,5 5,2.5 0,0' fill='none' stroke-width='1.6666666666666667' stroke='hsl(227, 71%25, 57%25)' stroke-linecap='round' transform='matrix(1,0,0,1,1.6666666666666667,2.5)' stroke-linejoin='round'%3E%3C/polyline%3E%3C/marker%3E%3C/defs%3E%3C/svg%3E");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  pointer-events: none;
+}
+</style>

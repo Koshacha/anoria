@@ -26,10 +26,10 @@ const services = [
     <div
       v-for="service in services"
       :key="service.title"
-      class="bg-white rounded-lg p-8 text-center"
+      class="bg-white rounded-lg p-8 text-center border border-gray-200 shadow-sm transition-shadow has-[a:hover]:shadow-md"
     >
       <div
-        class="w-16 h-16 bg-indigo-600 rounded-full flex items-center justify-center mx-auto mb-6"
+        class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-6"
       >
         <icon :name="service.icon" class="w-8 h-8 text-white" />
       </div>
@@ -41,12 +41,12 @@ const services = [
       </p>
       <nuxt-link
         :to="service.link"
-        class="text-indigo-600 font-medium hover:text-indigo-700 flex items-center justify-center"
+        class="text-ocean-indigo font-medium hover:text-indigo-700 flex items-center justify-center group/link"
       >
         Подробнее
         <icon
           name="material-symbols:chevron-right-rounded"
-          class="w-5 h-5 ml-1"
+          class="w-5 h-5 ml-1 group-hover/link:translate-x-1 transition-transform"
         />
       </nuxt-link>
     </div>
