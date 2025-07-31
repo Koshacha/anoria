@@ -1,3 +1,7 @@
+<script setup lang="ts">
+const { phoneLink } = useContacts();
+</script>
+
 <template>
   <header class="bg-white shadow-sm sticky top-0 z-30">
     <app-container>
@@ -11,7 +15,10 @@
             </template>
           </form-modal>
         </div>
-        <div class="md:hidden">
+        <div class="md:hidden flex items-center space-x-4">
+          <a :href="phoneLink" class="text-gray-500 hover:text-gray-700">
+            <Icon name="i-heroicons-phone" class="h-6 w-6" />
+          </a>
           <app-mobile-menu>
             <template #trigger="{ openMenu }">
               <app-button

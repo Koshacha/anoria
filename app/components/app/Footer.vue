@@ -1,8 +1,5 @@
 <script setup lang="ts">
-const { contacts } = useAppConfig();
-
-const phoneLink = `tel:${contacts.phone.replace(/\D/g, "")}`;
-const emailLink = `mailto:${contacts.email}`;
+const { phoneLink, emailLink, phone, email, address } = useContacts();
 
 const currentYear = new Date().getFullYear();
 </script>
@@ -21,7 +18,7 @@ const currentYear = new Date().getFullYear();
               :href="phoneLink"
               class="block text-2xl font-medium text-gray-900 hover:opacity-75 sm:text-3xl"
             >
-              {{ contacts.phone }}
+              {{ phone }}
             </a>
           </p>
 
@@ -30,10 +27,10 @@ const currentYear = new Date().getFullYear();
               <a
                 :href="emailLink"
                 class="hover:opacity-75 cursor-pointer text-lg"
-                >{{ contacts.email }}</a
+                >{{ email }}</a
               >
             </li>
-            <li>{{ contacts.address }}</li>
+            <li>{{ address }}</li>
           </ul>
         </div>
       </div>
@@ -42,21 +39,21 @@ const currentYear = new Date().getFullYear();
         <div class="sm:flex sm:items-center sm:justify-between">
           <ul class="flex flex-wrap gap-4 text-xs">
             <li>
-              <a href="#" class="text-gray-500 transition hover:opacity-75">
+              <nuxt-link
+                to="/privacy"
+                class="text-gray-500 transition hover:opacity-75"
+              >
                 Политика конфиденциальности
-              </a>
+              </nuxt-link>
             </li>
 
             <li>
-              <a href="#" class="text-gray-500 transition hover:opacity-75">
+              <nuxt-link
+                to="/agreement"
+                class="text-gray-500 transition hover:opacity-75"
+              >
                 Согласие на обработку персональных данных
-              </a>
-            </li>
-
-            <li>
-              <a href="#" class="text-gray-500 transition hover:opacity-75">
-                Cookies
-              </a>
+              </nuxt-link>
             </li>
           </ul>
 

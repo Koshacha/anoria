@@ -1,8 +1,5 @@
 <script setup lang="ts">
-const { contacts } = useAppConfig();
-
-const phoneLink = `tel:${contacts.phone.replace(/\D/g, "")}`;
-const emailLink = `mailto:${contacts.email}`;
+const { phoneLink, emailLink, phone, email, address } = useContacts();
 </script>
 
 <template>
@@ -34,14 +31,22 @@ const emailLink = `mailto:${contacts.email}`;
                 <div class="w-6 h-6 mr-4 flex-shrink-0">
                   <icon name="lucide:phone" class="w-6 h-6" />
                 </div>
-                <a :href="phoneLink" class="text-xl tracking-wide text-white hover:opacity-75">{{ contacts.phone }}</a>
+                <a
+                  :href="phoneLink"
+                  class="text-xl tracking-wide text-white hover:opacity-75"
+                  >{{ phone }}</a
+                >
               </div>
 
               <div class="flex items-center">
                 <div class="w-6 h-6 mr-4 flex-shrink-0">
                   <icon name="lucide:mail" class="w-6 h-6" />
                 </div>
-                <a :href="emailLink" class="text-xl tracking-wide text-white hover:opacity-75">{{ contacts.email }}</a>
+                <a
+                  :href="emailLink"
+                  class="text-xl tracking-wide text-white hover:opacity-75"
+                  >{{ email }}</a
+                >
               </div>
 
               <div class="flex items-start">
@@ -50,9 +55,13 @@ const emailLink = `mailto:${contacts.email}`;
                 </div>
                 <div>
                   <span class="text-xl tracking-wide text-balance">{{
-                    contacts.address
+                    address
                   }}</span>
                 </div>
+              </div>
+
+              <div>
+                <LazyYandexMap hydrate-on-visible />
               </div>
             </div>
           </div>
