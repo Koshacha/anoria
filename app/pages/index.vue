@@ -12,7 +12,18 @@
         </template>
       </section-hero-1>
       <section-services />
-      <section-why-us />
+
+      <section-why-us
+        :reasons="[
+          'Индивидуальный подход',
+          'Опытные специалисты',
+          'Современные технологии',
+        ]"
+      >
+        <template #title>Почему выбирают Anvoria?</template>
+      </section-why-us>
+
+      <section-stats />
       <section-testimonials />
       <section-get-in-touch />
     </main>
