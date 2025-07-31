@@ -1,9 +1,9 @@
-import PhoneMask from '@zoibana/phonemask'
+import PhoneMask from "@zoibana/phonemask";
 
 export default defineNuxtPlugin((nuxtApp) => {
-  nuxtApp.vueApp.directive('phone', {
+  nuxtApp.vueApp.directive("phone", {
     mounted(el) {
-      const phoneMask = new PhoneMask(el);
-    }
-  })
-})
+      new PhoneMask(el);
+    },
+  });
+});
