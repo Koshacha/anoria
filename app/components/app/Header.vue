@@ -4,7 +4,11 @@
       <div class="flex justify-between items-center py-4">
         <app-logo />
         <app-navigation />
-        <app-button>Оставить заявку</app-button>
+        <form-modal>
+          <template #default="{ openModal }">
+            <app-button @click="openModal()">Оставить заявку</app-button>
+          </template>
+        </form-modal>
       </div>
     </div>
   </header>

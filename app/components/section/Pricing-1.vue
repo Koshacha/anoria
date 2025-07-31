@@ -1,25 +1,12 @@
 <script setup lang="ts">
-const tariffs = [
-  {
-    name: "Старт",
-    price: 15000,
-    features: ["5 активных ботов", "1000 сообщений в месяц"],
-  },
-  {
-    name: "Гибкий",
-    price: 25000,
-    features: ["25 активных ботов", "5000 сообщений в месяц", "Поддержка 24/7"],
-  },
-  {
-    name: "Премиум",
-    price: 60000,
-    features: [
-      "100 активных ботов",
-      "Неограниченное количество сообщений",
-      "Приоритетная поддержка 24/7",
-    ],
-  },
-];
+defineProps<{
+  tariffs: {
+    name: string;
+    forWhat?: string;
+    price: number;
+    features: string[];
+  }[];
+}>();
 </script>
 
 <template>
@@ -46,9 +33,11 @@ const tariffs = [
           >
             <div class="space-y-2" :class="{ 'text-black': index !== 1 }">
               <h4 class="text-2xl font-bold">{{ tariff.name }}</h4>
-              <span class="text-6xl font-bold"
+              <span class="flex flex-wrap items-baseline text-6xl font-bold"
                 >{{ tariff.price.toLocaleString() }}
-                <span class="text-sm tracking-wide"> в месяц</span>
+                <span class="text-sm tracking-wide">
+                  {{ tariff.forWhat ?? "в месяц" }}</span
+                >
               </span>
             </div>
             <ul class="flex-1 space-y-2">
@@ -75,15 +64,20 @@ const tariffs = [
                 <span>{{ feature }}</span>
               </li>
             </ul>
-            <app-button
-              :rewrite-class="true"
-              class="inline-block w-full px-5 py-3 font-bold tracking-wider text-center rounded"
-              :class="{
-                'bg-white text-primary': index === 1,
-                'bg-primary text-white': index !== 1,
-              }"
-              >Оставить заявку</app-button
-            >
+            <form-modal>
+              <template #default="{ openModal }">
+                <app-button
+                  @click="openModal()"
+                  :rewrite-class="true"
+                  class="inline-block w-full px-5 py-3 font-bold tracking-wider text-center rounded"
+                  :class="{
+                    'bg-white text-primary': index === 1,
+                    'bg-primary text-white': index !== 1,
+                  }"
+                  >Оставить заявку</app-button
+                >
+              </template>
+            </form-modal>
           </div>
         </div>
       </div>

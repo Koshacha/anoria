@@ -1,24 +1,12 @@
 <script setup lang="ts">
-const services = [
-  {
-    title: "Колл-центр",
-    description: "Организация горячих и холодных звонков под ключ",
-    link: "/call-center",
-    icon: "material-symbols:support-agent",
-  },
-  {
-    title: "Набор персонала",
-    description: "Оперативно найдем сотрудников для вашего бизнеса",
-    link: "/recruiting",
-    icon: "material-symbols:work-history",
-  },
-  {
-    title: "Чат-боты под ключ",
-    description: "Настроим чат-бот для автоматизации процессов",
-    link: "/bots",
-    icon: "material-symbols:chat",
-  },
-];
+defineProps<{
+  services: {
+    title: string;
+    description: string;
+    link?: string;
+    icon: string;
+  }[];
+}>();
 </script>
 
 <template>
@@ -40,6 +28,7 @@ const services = [
         {{ service.description }}
       </p>
       <nuxt-link
+        v-if="service.link"
         :to="service.link"
         class="text-ocean-indigo font-medium hover:text-indigo-700 flex items-center justify-center group/link"
       >

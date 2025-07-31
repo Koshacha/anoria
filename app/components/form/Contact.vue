@@ -109,8 +109,12 @@ const onSubmit = handleSubmit(async (values) => {
 
       <div class="my-4">
         <form-checkbox v-model="privacyPolicy" v-bind="privacyPolicyAttrs">
-          Согласен с
-          <nuxt-link to="/privacy">политикой конфиденциальности</nuxt-link>
+          Я подтверждаю, что ознакомлен с
+          <nuxt-link to="/policy">политикой конфиденциальности</nuxt-link> и даю
+          согласие на
+          <nuxt-link to="/privacy"
+            >обработку своих персональных данных</nuxt-link
+          >
         </form-checkbox>
         <span v-if="errors.privacyPolicy" class="text-red-500 text-sm mt-2">{{
           errors.privacyPolicy
@@ -120,7 +124,6 @@ const onSubmit = handleSubmit(async (values) => {
       <div class="mt-4">
         <app-button type="submit" class="flex items-center">
           Отправить
-          <icon name="lucide:send" class="w-6 h-6 ml-2" />
         </app-button>
       </div>
     </form>
