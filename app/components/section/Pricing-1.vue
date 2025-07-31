@@ -16,7 +16,7 @@ defineProps<{
         <template #chip>Цены</template>
         Наши тарифы
       </app-heading>
-      <div class="flex flex-wrap items-stretch -mx-4">
+      <div class="flex flex-wrap items-stretch">
         <div
           v-for="(tariff, index) in tariffs"
           :key="index"
