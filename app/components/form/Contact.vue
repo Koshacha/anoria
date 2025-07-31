@@ -35,7 +35,7 @@ const [privacyPolicy, privacyPolicyAttrs] = defineField("privacyPolicy");
 
 const onSubmit = handleSubmit(async (values) => {
   try {
-    const response = await $fetch("/api/hello", {
+    const response = await $fetch("/api/leads", {
       method: "POST",
       body: values,
     });
@@ -72,6 +72,7 @@ const onSubmit = handleSubmit(async (values) => {
           <form-label> Телефон </form-label>
           <form-input
             v-model="phone"
+            v-phone
             type="tel"
             placeholder="Номер телефона"
             v-bind="phoneAttrs"
@@ -110,8 +111,8 @@ const onSubmit = handleSubmit(async (values) => {
       <div class="my-4">
         <form-checkbox v-model="privacyPolicy" v-bind="privacyPolicyAttrs">
           Я подтверждаю, что ознакомлен с
-          <nuxt-link to="/privacy">политикой конфиденциальности</nuxt-link> и даю
-          согласие на
+          <nuxt-link to="/privacy">политикой конфиденциальности</nuxt-link> и
+          даю согласие на
           <nuxt-link to="/agreement"
             >обработку своих персональных данных</nuxt-link
           >
