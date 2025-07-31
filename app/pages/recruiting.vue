@@ -1,3 +1,12 @@
+<script setup lang="ts">
+const { prices } = useAppConfig();
+
+useHead({
+  title: "Anvoria – найм",
+  description: "Ваш технологичный партнёр в бизнесе. Колл-центр, найм, чат-боты – все в одном месте.",
+});
+</script>
+
 <template>
   <div>
     <section-hero-1>
@@ -63,28 +72,7 @@
       <template #title>Почему стоит выбрать нас?</template>
     </section-why-us-1>
 
-    <section-pricing-1
-      :tariffs="[
-        {
-          name: 'Базовый',
-          price: 300,
-          forWhat: 'за лид',
-          features: ['Предоставление лида'],
-        },
-        {
-          name: 'Оптимальный',
-          price: 3000,
-          forWhat: 'за кандидата',
-          features: ['Горячий лид'],
-        },
-        {
-          name: 'Премиум',
-          price: 25000,
-          forWhat: 'за закрытие вакансии',
-          features: ['Под ключ'],
-        },
-      ]"
-    />
+    <section-pricing-1 :tariffs="prices.recruiting" />
 
     <section-get-in-touch />
   </div>

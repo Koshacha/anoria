@@ -1,3 +1,12 @@
+<script setup lang="ts">
+const { prices } = useAppConfig();
+
+useHead({
+  title: "Anvoria – чат-боты",
+  description: "Ваш технологичный партнёр в бизнесе. Колл-центр, найм, чат-боты – все в одном месте.",
+});
+</script>
+
 <template>
   <div>
     <section-hero-1>
@@ -81,28 +90,7 @@
       <template #title>Почему стоит выбрать нас?</template>
     </section-why-us-1>
 
-    <section-pricing-1
-      :tariffs="[
-        {
-          name: 'Базовый',
-          price: 10000,
-          forWhat: 'рублей',
-          features: ['Для малого бизнеса и лендинга'],
-        },
-        {
-          name: 'Оптимальный',
-          price: 30000,
-          forWhat: 'рублей',
-          features: ['Под Ваш бизнес процесс'],
-        },
-        {
-          name: 'Премиум',
-          price: 65000,
-          forWhat: 'рублей',
-          features: ['Индивидуальные условия'],
-        },
-      ]"
-    />
+    <section-pricing-1 :tariffs="prices.bots" />
 
     <section-get-in-touch />
   </div>

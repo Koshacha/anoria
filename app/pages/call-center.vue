@@ -1,3 +1,12 @@
+<script setup lang="ts">
+const { prices } = useAppConfig();
+
+useHead({
+  title: "Anvoria – колл-центр",
+  description: "Ваш технологичный партнёр в бизнесе. Колл-центр, найм, чат-боты – все в одном месте.",
+});
+</script>
+
 <template>
   <div>
     <section-hero-1>
@@ -47,33 +56,7 @@
       ]"
     />
 
-    <section-pricing-1
-      :tariffs="[
-        {
-          name: 'Старт',
-          price: 15000,
-          features: ['5 активных ботов', '1000 сообщений в месяц'],
-        },
-        {
-          name: 'Гибкий',
-          price: 25000,
-          features: [
-            '25 активных ботов',
-            '5000 сообщений в месяц',
-            'Поддержка 24/7',
-          ],
-        },
-        {
-          name: 'Премиум',
-          price: 60000,
-          features: [
-            '100 активных ботов',
-            'Неограниченное количество сообщений',
-            'Приоритетная поддержка 24/7',
-          ],
-        },
-      ]"
-    />
+    <section-pricing-1 :tariffs="prices.callCenter" />
 
     <section-get-in-touch />
   </div>

@@ -3,7 +3,7 @@ const { phoneLink, emailLink, phone, email, address } = useContacts();
 
 defineProps<{
   simple?: boolean;
-}>()
+}>();
 
 const currentYear = new Date().getFullYear();
 </script>
@@ -41,7 +41,12 @@ const currentYear = new Date().getFullYear();
 
       <div class="mt-12 border-t border-gray-100 pt-12">
         <div class="sm:flex sm:items-center sm:justify-between">
-          <ul class="flex flex-wrap gap-4 text-xs">
+          <ul
+            class="flex flex-wrap gap-4 text-xs"
+            :class="{
+              'print:hidden': simple,
+            }"
+          >
             <li>
               <nuxt-link
                 to="/privacy"

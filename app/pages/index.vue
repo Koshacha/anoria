@@ -1,3 +1,10 @@
+<script setup lang="ts">
+useHead({
+  title: "Anvoria – главная страница",
+  description: "Ваш технологичный партнёр в бизнесе. Колл-центр, найм, чат-боты – все в одном месте.",
+});
+</script>
+
 <template>
   <div>
     <section-hero-1>
