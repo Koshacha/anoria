@@ -3,6 +3,14 @@
 @tailwind utilities;
 
 @layer base {
+  html {
+    @apply antialiased;
+  }
+
+  main {
+    @apply overflow-x-hidden;
+  }
+
   a {
     @apply text-ocean-indigo;
   }

@@ -22,7 +22,7 @@ export default defineNuxtConfig({
   app: {
     head: {
       bodyAttrs: {
-        class: "bg-white text-black font-display",
+        class: "min-h-screen bg-gray-50 text-black font-inter",
       },
     },
   },
@@ -53,7 +53,7 @@ export default defineNuxtConfig({
       theme: {
         extend: {
           fontFamily: {
-            display: [
+            inter: [
               "Inter",
               "Helvetica Neue",
               "Segoe UI",
