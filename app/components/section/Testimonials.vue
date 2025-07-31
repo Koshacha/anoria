@@ -20,16 +20,18 @@ const carouselProps = {
 </script>
 
 <template>
-  <section class="my-16">
-    <nuxt-carousel v-bind="carouselProps">
-      <nuxt-slide v-for="(item, index) in data" :key="index">
-        <testimonial :data="item" />
-      </nuxt-slide>
+  <section id="testimonials" class="my-16">
+    <app-container>
+      <nuxt-carousel v-bind="carouselProps">
+        <nuxt-slide v-for="(item, index) in data" :key="index">
+          <testimonial :data="item" />
+        </nuxt-slide>
 
-      <template #addons>
-        <nuxt-pagination />
-      </template>
-    </nuxt-carousel>
+        <template #addons>
+          <nuxt-pagination />
+        </template>
+      </nuxt-carousel>
+    </app-container>
   </section>
 </template>
 

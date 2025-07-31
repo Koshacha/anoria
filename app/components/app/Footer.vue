@@ -1,16 +1,15 @@
 <script setup lang="ts">
 const { contacts } = useAppConfig();
 
-const phoneLink = `tel:${contacts.phone.replace(/\D/g, '')}`;
+const phoneLink = `tel:${contacts.phone.replace(/\D/g, "")}`;
 const emailLink = `mailto:${contacts.email}`;
 
 const currentYear = new Date().getFullYear();
-
 </script>
 
 <template>
-  <footer class="bg-white max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="px-4 py-16 sm:px-6 lg:px-8">
+  <footer class="bg-white py-4">
+    <app-container>
       <div class="grid grid-cols-1 gap-8 sm:grid-cols-2">
         <div>
           <p>
@@ -22,12 +21,18 @@ const currentYear = new Date().getFullYear();
               :href="phoneLink"
               class="block text-2xl font-medium text-gray-900 hover:opacity-75 sm:text-3xl"
             >
-              {{ contacts.phone  }}
+              {{ contacts.phone }}
             </a>
           </p>
 
           <ul class="mt-4 space-y-1 text-sm text-gray-700">
-            <li><a :href="emailLink" class="hover:opacity-75 cursor-pointer text-lg">{{ contacts.email }}</a></li>
+            <li>
+              <a
+                :href="emailLink"
+                class="hover:opacity-75 cursor-pointer text-lg"
+                >{{ contacts.email }}</a
+              >
+            </li>
             <li>{{ contacts.address }}</li>
           </ul>
         </div>
@@ -60,6 +65,6 @@ const currentYear = new Date().getFullYear();
           </p>
         </div>
       </div>
-    </div>
+    </app-container>
   </footer>
 </template>

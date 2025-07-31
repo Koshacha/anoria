@@ -1,53 +1,58 @@
 <script setup lang="ts">
 const { contacts } = useAppConfig();
+
+const phoneLink = `tel:${contacts.phone.replace(/\D/g, "")}`;
+const emailLink = `mailto:${contacts.email}`;
 </script>
 
 <template>
-  <section class="max-w-6xl mx-auto">
-    <app-heading>
-      <template #subtitle>Хотите обсудить ваш кейс?</template>
-      Оставить заявку
-    </app-heading>
+  <section id="contact">
+    <app-container>
+      <app-heading>
+        <template #subtitle>Хотите обсудить ваш кейс?</template>
+        Оставить заявку
+      </app-heading>
 
-    <div class="rounded-2xl p-8 border border-gray-200 relative">
-      <div
-        class="arrow absolute top-0 right-0 translate-x-20 -translate-y-10 w-96 h-96"
-      >
-        {{ " " }}
-      </div>
-      <div class="grid lg:grid-cols-2 gap-12">
-        <div class="contacts-card rounded-2xl shadow-sm p-8 text-white">
-          <h2 class="text-2xl font-bold mb-6">Контакты для связи</h2>
+      <div class="rounded-2xl p-4 lg:p-8 border border-gray-200 relative">
+        <div
+          class="arrow hidden md:block absolute top-0 right-0 translate-x-20 -translate-y-10 w-96 h-96"
+        ></div>
+        <div class="grid lg:grid-cols-2 gap-12">
+          <div class="contacts-card rounded-2xl shadow-sm p-8 text-white">
+            <h2 class="text-2xl font-bold mb-6">Контакты для связи</h2>
 
-          <div class="space-y-6">
-            <div class="flex items-center">
-              <div class="w-6 h-6 mr-4 flex-shrink-0">
-                <icon name="lucide:phone" class="w-6 h-6" />
+            <div class="space-y-6">
+              <div class="flex items-center">
+                <div class="w-6 h-6 mr-4 flex-shrink-0">
+                  <icon name="lucide:phone" class="w-6 h-6" />
+                </div>
+                <a :href="phoneLink" class="text-lg hover:opacity-75">{{ contacts.phone }}</a>
               </div>
-              <span class="text-lg">{{ contacts.phone }}</span>
-            </div>
 
-            <div class="flex items-center">
-              <div class="w-6 h-6 mr-4 flex-shrink-0">
-                <icon name="lucide:mail" class="w-6 h-6" />
+              <div class="flex items-center">
+                <div class="w-6 h-6 mr-4 flex-shrink-0">
+                  <icon name="lucide:mail" class="w-6 h-6" />
+                </div>
+                <a :href="emailLink" class="text-lg hover:opacity-75">{{ contacts.email }}</a>
               </div>
-              <span class="text-lg">{{ contacts.email }}</span>
-            </div>
 
-            <div class="flex items-start">
-              <div class="w-6 h-6 mr-4 flex-shrink-0 mt-1">
-                <icon name="lucide:map" class="w-6 h-6" />
-              </div>
-              <div>
-                <span class="text-lg">{{ contacts.address }}</span>
+              <div class="flex items-start">
+                <div class="w-6 h-6 mr-4 flex-shrink-0 mt-1">
+                  <icon name="lucide:map" class="w-6 h-6" />
+                </div>
+                <div>
+                  <span class="text-lg text-balance">{{
+                    contacts.address
+                  }}</span>
+                </div>
               </div>
             </div>
           </div>
-        </div>
 
-        <form-contact />
+          <form-contact />
+        </div>
       </div>
-    </div>
+    </app-container>
   </section>
 </template>
 

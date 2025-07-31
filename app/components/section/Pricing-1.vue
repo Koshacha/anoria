@@ -10,8 +10,8 @@ defineProps<{
 </script>
 
 <template>
-  <section class="py-20">
-    <div class="container px-4 mx-auto">
+  <section id="prices" class="py-10 lg:py-20">
+    <app-container>
       <app-heading>
         <template #chip>Цены</template>
         Наши тарифы
@@ -79,6 +79,6 @@ defineProps<{
           </div>
         </div>
       </div>
-    </div>
+    </app-container>
   </section>
 </template>

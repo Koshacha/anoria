@@ -3,27 +3,48 @@ defineProps<{
   steps: {
     title: string;
     description: string;
+    icon?: string;
   }[];
 }>();
 </script>
 
 <template>
-  <div
-    class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20"
-  >
-    <app-heading> Как мы работаем </app-heading>
-    <div class="grid gap-8 row-gap-8 lg:grid-cols-3">
-      <div v-for="(step, index) in steps" :key="index" class="sm:text-center">
-        <div
-          class="flex items-center justify-center w-20 h-20 mb-4 text-4xl font-extrabold rounded-full text-frost-tint bg-primary sm:mx-auto"
-        >
-          {{ index + 1 }}
+  <section class="gradiente w-full">
+    <app-container>
+      <div class="text-gray-50 py-16 lg:py-20">
+        <app-heading> Как мы работаем </app-heading>
+        <div class="grid gap-8 row-gap-8 lg:grid-cols-3">
+          <div v-for="(step, index) in steps" :key="index">
+            <div>
+              <span
+                class="flex h-12 w-12 items-center justify-center rounded-xl bg-white bg-opacity-10"
+              >
+                <icon
+                  :name="step.icon ?? 'lucide:check'"
+                  class="h-8 w-8 text-white"
+                />
+              </span>
+            </div>
+            <div class="mt-6">
+              <h3 class="text-lg font-semibold leading-8 text-white">
+                {{ step.title }}
+              </h3>
+              <p class="mt-2 text-base leading-7 text-gray-200">
+                {{ step.description }}
+              </p>
+            </div>
+          </div>
         </div>
-        <h6 class="mb-2 font-semibold leading-5 text-lg">{{ step.title }}</h6>
-        <p class="max-w-xs mb-3 text-gray-900 sm:mx-auto text-balance">
-          {{ step.description }}
-        </p>
       </div>
-    </div>
-  </div>
+    </app-container>
+  </section>
 </template>
+
+<style scoped>
+.gradiente {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.dev/svgjs' viewBox='0 0 700 700' width='700' height='700' opacity='0.92'%3E%3Cdefs%3E%3ClinearGradient gradientTransform='rotate(158, 0.5, 0.5)' x1='50%25' y1='0%25' x2='50%25' y2='100%25' id='ffflux-gradient'%3E%3Cstop stop-color='%231a4eff' stop-opacity='1' offset='0%25'%3E%3C/stop%3E%3Cstop stop-color='hsl(252, 100%25, 50%25)' stop-opacity='1' offset='100%25'%3E%3C/stop%3E%3C/linearGradient%3E%3Cfilter id='ffflux-filter' x='-20%25' y='-20%25' width='140%25' height='140%25' filterUnits='objectBoundingBox' primitiveUnits='userSpaceOnUse' color-interpolation-filters='sRGB'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.005 0.003' numOctaves='1' seed='287' stitchTiles='stitch' x='0%25' y='0%25' width='100%25' height='100%25' result='turbulence'%3E%3C/feTurbulence%3E%3CfeGaussianBlur stdDeviation='40 21' x='0%25' y='0%25' width='100%25' height='100%25' in='turbulence' edgeMode='duplicate' result='blur'%3E%3C/feGaussianBlur%3E%3CfeBlend mode='color-dodge' x='0%25' y='0%25' width='100%25' height='100%25' in='SourceGraphic' in2='blur' result='blend'%3E%3C/feBlend%3E%3CfeColorMatrix type='saturate' values='3' x='0%25' y='0%25' width='100%25' height='100%25' in='blend' result='colormatrix'%3E%3C/feColorMatrix%3E%3C/filter%3E%3C/defs%3E%3Crect width='700' height='700' fill='url(%23ffflux-gradient)' filter='url(%23ffflux-filter)'%3E%3C/rect%3E%3C/svg%3E");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+</style>

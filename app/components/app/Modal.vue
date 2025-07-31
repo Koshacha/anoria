@@ -28,7 +28,7 @@ onUnmounted(() => {
 <template>
   <slot name="trigger" :openModal="openModal" />
 
-  <Teleport to="body">
+  <Teleport id="modal" to="body">
     <AnimatePresence :initial="false">
       <motion.div
         v-if="open"
