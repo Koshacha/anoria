@@ -14,6 +14,7 @@ export default defineNuxtConfig({
     "motion-v/nuxt",
     "vue3-carousel-nuxt",
     "@vee-validate/nuxt",
+    "@vueuse/nuxt"
   ],
 
   css: ["~/assets/css/main.css"],
