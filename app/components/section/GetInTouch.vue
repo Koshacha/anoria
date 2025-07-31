@@ -13,6 +13,14 @@ const emailLink = `mailto:${contacts.email}`;
         Оставить заявку
       </app-heading>
 
+      <div class="lg:hidden grid place-content-center -mt-6 mb-8">
+        <form-modal>
+          <template #default="{ openModal }">
+            <app-button @click="openModal()"> Оставить заявку </app-button>
+          </template>
+        </form-modal>
+      </div>
+
       <div class="rounded-2xl p-4 lg:p-8 border border-gray-200 relative">
         <div
           class="arrow hidden md:block absolute top-0 right-0 translate-x-20 -translate-y-10 w-96 h-96"
@@ -26,14 +34,14 @@ const emailLink = `mailto:${contacts.email}`;
                 <div class="w-6 h-6 mr-4 flex-shrink-0">
                   <icon name="lucide:phone" class="w-6 h-6" />
                 </div>
-                <a :href="phoneLink" class="text-lg hover:opacity-75">{{ contacts.phone }}</a>
+                <a :href="phoneLink" class="text-xl tracking-wide text-white hover:opacity-75">{{ contacts.phone }}</a>
               </div>
 
               <div class="flex items-center">
                 <div class="w-6 h-6 mr-4 flex-shrink-0">
                   <icon name="lucide:mail" class="w-6 h-6" />
                 </div>
-                <a :href="emailLink" class="text-lg hover:opacity-75">{{ contacts.email }}</a>
+                <a :href="emailLink" class="text-xl tracking-wide text-white hover:opacity-75">{{ contacts.email }}</a>
               </div>
 
               <div class="flex items-start">
@@ -41,7 +49,7 @@ const emailLink = `mailto:${contacts.email}`;
                   <icon name="lucide:map" class="w-6 h-6" />
                 </div>
                 <div>
-                  <span class="text-lg text-balance">{{
+                  <span class="text-xl tracking-wide text-balance">{{
                     contacts.address
                   }}</span>
                 </div>
