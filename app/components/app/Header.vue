@@ -3,7 +3,7 @@ const { phoneLink } = useContacts();
 </script>
 
 <template>
-  <header class="bg-white shadow-sm sticky top-0 z-30">
+  <header class="bg-white/60 backdrop-blur shadow-sm sticky top-0 z-30">
     <app-container>
       <div class="flex justify-between items-center py-4">
         <app-logo />

@@ -18,7 +18,7 @@
       </template>
 
       <template #right>
-        <section-why-us
+        <section-why-us-2
           :reasons="[
             'Опытные операторы',
             'Быстрый старт работы',
@@ -26,7 +26,7 @@
           ]"
         >
           <template #title>Почему мы?</template>
-        </section-why-us>
+        </section-why-us-2>
       </template>
     </section-hero-1>
 
@@ -52,7 +52,8 @@
       ]"
     />
 
-    <section-why-us
+    <section-why-us-1
+      class="mt-8"
       :reasons="[
         '5 лет опыта в области рекрутинга',
         'Массовый и точеченый подбор',
@@ -60,7 +61,7 @@
       ]"
     >
       <template #title>Почему стоит выбрать нас?</template>
-    </section-why-us>
+    </section-why-us-1>
 
     <section-pricing-1
       :tariffs="[

@@ -110,7 +110,7 @@ const onSubmit = handleSubmit(async (values) => {
       <div class="my-4">
         <form-checkbox v-model="privacyPolicy" v-bind="privacyPolicyAttrs">
           Я подтверждаю, что ознакомлен с
-          <nuxt-link to="/policy">политикой конфиденциальности</nuxt-link> и даю
+          <nuxt-link to="/privacy">политикой конфиденциальности</nuxt-link> и даю
           согласие на
           <nuxt-link to="/agreement"
             >обработку своих персональных данных</nuxt-link

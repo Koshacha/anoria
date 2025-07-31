@@ -12,11 +12,11 @@ definePageMeta({
   <div id="inputResult">
     <div class="row mb-4">
       <div class="col">
-        <h4>
+        <h1>
           <strong
             >Политика в&nbsp;отношении обработки персональных данных</strong
           >
-        </h4>
+        </h1>
       </div>
     </div>
     <div class="row mb-4">

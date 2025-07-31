@@ -1,13 +1,17 @@
 <script setup lang="ts">
 const { phoneLink, emailLink, phone, email, address } = useContacts();
 
+defineProps<{
+  simple?: boolean;
+}>()
+
 const currentYear = new Date().getFullYear();
 </script>
 
 <template>
   <footer class="bg-white py-4">
     <app-container>
-      <div class="grid grid-cols-1 gap-8 sm:grid-cols-2">
+      <div v-if="!simple" class="grid grid-cols-1 gap-8 sm:grid-cols-2">
         <div>
           <p>
             <span class="text-xs tracking-wide text-gray-500 uppercase">

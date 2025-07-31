@@ -12,7 +12,7 @@ defineProps<{
   <section class="gradiente w-full">
     <app-container>
       <div class="text-gray-50 py-16 lg:py-20">
-        <app-heading> Как мы работаем </app-heading>
+        <app-heading class="text-shadow-lg"> Как мы работаем </app-heading>
         <div class="grid gap-8 row-gap-8 lg:grid-cols-3">
           <div v-for="(step, index) in steps" :key="index">
             <div class="max-sm:flex items-center justify-center">

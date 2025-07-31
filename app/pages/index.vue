@@ -34,17 +34,24 @@
       ]"
     />
 
-    <section-why-us
-      :reasons="[
-        'Индивидуальный подход',
-        'Опытные специалисты',
-        'Современные технологии',
-      ]"
-    >
-      <template #title>Почему выбирают Anvoria?</template>
-    </section-why-us>
+    <app-container>
+      <div class="grid grid-cols-1 md:grid-cols-2">
+      <div>
+        <section-why-us-1
+          :reasons="[
+            'Индивидуальный подход',
+            'Опытные специалисты',
+            'Современные технологии',
+          ]"
+        >
+          <template #title>Почему выбирают <fancy-word>Anvoria</fancy-word>?</template>
+        </section-why-us-1>
+      </div>
 
-    <section-stats />
+      <section-stats />
+    </div>
+    </app-container>
+
     <section-testimonials />
     <section-get-in-touch />
   </div>
