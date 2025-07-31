@@ -55,7 +55,7 @@ const onSubmit = handleSubmit(async (values) => {
         v-bind="honeypotAttrs"
         class="hidden"
       />
-      <div class="grid md:grid-cols-2 gap-6">
+      <div class="grid md:grid-cols-2 md:gap-6">
         <div class="mb-2">
           <form-label> Имя </form-label>
           <form-input
@@ -112,7 +112,7 @@ const onSubmit = handleSubmit(async (values) => {
           Я подтверждаю, что ознакомлен с
           <nuxt-link to="/policy">политикой конфиденциальности</nuxt-link> и даю
           согласие на
-          <nuxt-link to="/privacy"
+          <nuxt-link to="/agreement"
             >обработку своих персональных данных</nuxt-link
           >
         </form-checkbox>
