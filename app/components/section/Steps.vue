@@ -15,7 +15,7 @@ defineProps<{
         <app-heading> Как мы работаем </app-heading>
         <div class="grid gap-8 row-gap-8 lg:grid-cols-3">
           <div v-for="(step, index) in steps" :key="index">
-            <div>
+            <div class="max-sm:flex items-center justify-center">
               <span
                 class="flex h-12 w-12 items-center justify-center rounded-xl bg-white bg-opacity-10"
               >
@@ -25,7 +25,7 @@ defineProps<{
                 />
               </span>
             </div>
-            <div class="mt-6">
+            <div class="mt-6 max-sm:text-center text-balance max-w-xs max-sm:mx-auto">
               <h3 class="text-lg font-semibold leading-8 text-white">
                 {{ step.title }}
               </h3>

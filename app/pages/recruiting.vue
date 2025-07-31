@@ -36,15 +36,18 @@
           title: 'Формируем требования',
           description:
             'Определяем критерии поиска и нужное количество кандидатов',
+          icon: 'fa7-solid:list-ol',
         },
         {
           title: 'Ищем сотрудников',
           description:
             'Привлекаем соискателей через разные каналы привлечения, проводим набор',
+          icon: 'streamline-ultimate:job-search-man-bold',
         },
         {
           title: 'Ваш штат укомплектован',
           description: 'Набор произведен, вакансии закрыты',
+          icon: 'fluent:people-team-24-filled',
         },
       ]"
     />

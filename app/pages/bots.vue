@@ -55,14 +55,17 @@
         {
           title: 'Формируем предложение под ваш запрос',
           description: 'На основе запроса делаем ТЗ',
+          icon: 'icon-park-outline:list-bottom',
         },
         {
           title: 'Тестируем бота',
           description: 'Перед запуском производим тестирование',
+          icon: 'tabler:device-imac-cog',
         },
         {
           title: 'Запуск',
           description: 'Ваш бот работает',
+          icon: 'garden:bot-sparkle-fill-12',
         },
       ]"
     />
