@@ -8,14 +8,13 @@ const { variant = "primary", ...props } = defineProps<{
 }>();
 
 const BASE_STYLES =
-  "bg-blue-600 text-white px-8 py-3 rounded-lg font-medium hover:bg-blue-700 transition-colors";
+  "bg-primary text-white px-8 py-3 rounded-2xl font-medium hover:bg-blue-700 transition-colors shadow-md shadow-frost-tint/30 hover:shadow-xl";
 
 const animations = {
   transition: {
     duration: 0.4,
     scale: { type: "spring", visualDuration: 0.4, bounce: 0.5 },
   },
-  whileHover: { scale: 1.02 },
   whilePress: { scale: 0.99 },
 };
 </script>
