@@ -1,0 +1,43 @@
+<template>
+  <div class="min-h-screen bg-gray-50">
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <section-hero-1>
+        <template #title
+          ><fancy-word class="text-primary">Колл-центр</fancy-word></template
+        >
+        <template #description> Аутсорсинг звонков для компаний. </template>
+      </section-hero-1>
+
+      <section-why-us
+        :reasons="[
+          'Опытные операторы',
+          'Быстрый старт работы',
+          'Контроль качества',
+        ]"
+      >
+        <template #title>Почему мы?</template>
+      </section-why-us>
+
+      <section-steps
+        :steps="[
+          {
+            title: 'Знакомство',
+            description: 'Знакомимся с бизнесом и формируем предложение',
+          },
+          {
+            title: 'Разработка',
+            description: 'Настраиваем скрипты и обучаем операторов',
+          },
+          {
+            title: 'Обработка',
+            description: 'Приступаем к обработке звонков',
+          },
+        ]"
+      />
+
+      <section-pricing-1 />
+
+      <section-get-in-touch />
+    </main>
+  </div>
+</template>

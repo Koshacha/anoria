@@ -2,13 +2,20 @@
 import type { HTMLAttributes } from "vue";
 import { animate, motion } from "motion-v";
 
-const { variant = "primary", ...props } = defineProps<{
+const {
+  variant = "primary",
+  rewriteClass = false,
+  ...props
+} = defineProps<{
   variant?: "primary" | "secondary";
   class?: HTMLAttributes["class"];
+  rewriteClass?: boolean;
 }>();
 
 const BASE_STYLES =
-  "bg-primary text-white px-8 py-3 rounded-2xl font-medium hover:bg-blue-700 transition-colors shadow-md shadow-frost-tint/30 hover:shadow-xl";
+  rewriteClass !== true
+    ? "bg-primary text-white px-8 py-3 rounded-2xl font-medium hover:bg-blue-700 transition-colors shadow-md shadow-frost-tint/30 hover:shadow-xl"
+    : "";
 
 const animations = {
   transition: {
