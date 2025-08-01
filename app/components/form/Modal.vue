@@ -1,3 +1,9 @@
+<script setup lang="ts">
+defineProps<{
+  tariff?: string;
+}>();
+</script>
+
 <template>
   <app-modal>
     <template #title> Отправить заявку </template>
@@ -5,7 +11,7 @@
       <slot :openModal="openModal" />
     </template>
     <template #content>
-      <form-contact :tariff="$attrs.tariff as string" />
+      <form-contact :tariff />
     </template>
   </app-modal>
 </template>
