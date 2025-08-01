@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const { phoneLink, emailLink, phone, email, address } = useContacts();
+const { phoneLink, emailLink, phone, email, addresses } = useContacts();
 
 defineProps<{
   simple?: boolean;
@@ -34,7 +34,9 @@ const currentYear = new Date().getFullYear();
                 >{{ email }}</a
               >
             </li>
-            <li>{{ address }}</li>
+            <li v-for="(address, index) in addresses" :key="index">
+              {{ address }}
+            </li>
           </ul>
         </div>
       </div>

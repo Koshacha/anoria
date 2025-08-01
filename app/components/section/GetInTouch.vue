@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const { phoneLink, emailLink, phone, email, address } = useContacts();
+const { phoneLink, emailLink, phone, email, addresses } = useContacts();
 </script>
 
 <template>
@@ -49,12 +49,16 @@ const { phoneLink, emailLink, phone, email, address } = useContacts();
                 >
               </div>
 
-              <div class="flex items-start">
+              <div
+                v-for="(address, index) in addresses"
+                :key="index"
+                class="flex items-start"
+              >
                 <div class="w-6 h-6 mr-4 flex-shrink-0 mt-1">
                   <icon name="lucide:map" class="w-6 h-6" />
                 </div>
                 <div>
-                  <span class="text-xl tracking-wide text-balance">{{
+                  <span class="text-xl tracking-wide text-balance block">{{
                     address
                   }}</span>
                 </div>
