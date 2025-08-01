@@ -1,6 +1,6 @@
 <script setup lang="ts">
 const links = [
-  { href: "/call-center", text: "Онлайн-колл-центр" },
+  { href: "/call-center", text: "Колл-центр" },
   { href: "/recruiting", text: "Набор сотрудников" },
   { href: "/bots", text: "Чат-боты" },
 ];
