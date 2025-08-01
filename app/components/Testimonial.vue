@@ -5,7 +5,6 @@ defineProps<{
     text: string;
     author: string;
     position: string;
-    photo: string;
   };
 }>();
 </script>
@@ -27,20 +26,9 @@ defineProps<{
       <p class="mt-2 text-base text-gray-600">{{ data.text }}</p>
     </blockquote>
     <footer class="mt-6">
-      <div class="flex items-center">
-        <nuxt-img
-          :src="data.photo"
-          :alt="data.author"
-          class="h-12 w-12 rounded-full object-cover"
-          width="48"
-          height="48"
-          format="webp"
-          loading="lazy"
-        />
-        <div class="ml-4">
-          <p class="font-semibold text-graphite-navy">{{ data.author }}</p>
-          <p class="text-sm text-gray-500">{{ data.position }}</p>
-        </div>
+      <div>
+        <p class="font-semibold text-graphite-navy">{{ data.author }}</p>
+        <p class="text-sm text-gray-500">{{ data.position }}</p>
       </div>
     </footer>
   </div>
