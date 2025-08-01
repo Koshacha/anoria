@@ -1,25 +1,9 @@
 <script setup lang="ts">
 import { useForm } from "vee-validate";
 import { toTypedSchema } from "@vee-validate/zod";
-import isMobilePhone from 'validator/es/lib/isMobilePhone';
-import * as z from "zod";
+import { zodSchema } from "#shared/validators/lead";
 
-const required = z.string("Это поле обязательно");
-
-const validationSchema = toTypedSchema(
-  z.object({
-    name: required,
-    phone: required.refine(isMobilePhone, {
-      message: "Неверный формат телефона",
-    }),
-    email: z.email("Неверный формат email"),
-    message: required,
-    privacyPolicy: z.boolean().refine((value) => value, {
-      message: "Вы должны согласиться с политикой конфиденциальности",
-    }),
-    aboutBumblebees: z.string().max(0),
-  })
-);
+const validationSchema = toTypedSchema(zodSchema);
 
 const { handleSubmit, errors, defineField } = useForm({
   validationSchema,
@@ -112,12 +96,10 @@ const onSubmit = handleSubmit(async (values) => {
 
       <div class="my-4">
         <form-checkbox v-model="privacyPolicy" v-bind="privacyPolicyAttrs">
-          Я подтверждаю, что ознакомлен с
-          <nuxt-link to="/privacy">политикой конфиденциальности</nuxt-link> и
-          даю согласие на
-          <nuxt-link to="/agreement"
-            >обработку своих персональных данных</nuxt-link
-          >
+          Нажимая кнопку «Отправить», вы соглашаетесь с
+          <nuxt-link to="/privacy"
+            >политикой обработки персональных данных</nuxt-link
+          >.
         </form-checkbox>
         <span v-if="errors.privacyPolicy" class="text-red-500 text-sm mt-2">{{
           errors.privacyPolicy
