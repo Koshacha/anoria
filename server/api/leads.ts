@@ -1,11 +1,12 @@
-import { zodSchema } from '#shared/validators/lead';
-import { Lead } from '../models/Lead';
+import { zodSchema } from "#shared/validators/lead";
+import { Lead } from "../models/Lead";
 
 export default defineEventHandler(async (event) => {
-  if (event.method !== 'POST') {
-    setResponseStatus(event, 405, 'Method Not Allowed');
+  if (event.method !== "POST") {
+    setResponseStatus(event, 405, "Method Not Allowed");
     return {
-      error: 'Method Not Allowed',
+      success: false,
+      reason: "Method Not Allowed",
     };
   }
 
@@ -15,21 +16,20 @@ export default defineEventHandler(async (event) => {
 
   if (!result.success) {
     return {
-      status: 'error',
-      errors: result.error.issues,
+      success: false,
+      reason: result.error.issues,
     };
   }
 
   try {
     await Lead.create(result.data);
     return {
-      status: 'ok',
+      success: true,
     };
   } catch (error) {
-    console.error(error);
     return {
-      status: 'error',
-      message: 'Произошла ошибка при сохранении данных',
+      success: false,
+      reason: "Произошла ошибка при сохранении данных",
     };
   }
 });

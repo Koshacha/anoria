@@ -1,7 +1,7 @@
-import { defineMongooseModel } from '#nuxt/mongoose';
+import { defineMongooseModel } from "#nuxt/mongoose";
 
 export const Lead = defineMongooseModel({
-  name: 'Lead',
+  name: "Lead",
   schema: {
     name: {
       type: String,
@@ -18,6 +18,14 @@ export const Lead = defineMongooseModel({
     message: {
       type: String,
       required: true,
+    },
+    service: {
+      type: String,
+      required: false,
+    },
+    tariff: {
+      type: String,
+      required: false,
     },
   },
 });
