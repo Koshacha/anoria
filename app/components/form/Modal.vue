@@ -5,7 +5,7 @@
       <slot :openModal="openModal" />
     </template>
     <template #content>
-      <form-contact />
+      <form-contact :tariff="$attrs.tariff as string" />
     </template>
   </app-modal>
 </template>

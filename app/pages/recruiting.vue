@@ -1,9 +1,14 @@
 <script setup lang="ts">
 const { prices } = useAppConfig();
 
-useHead({
+useSeoMeta({
   title: "Anvoria – найм",
-  description: "Ваш технологичный партнёр в бизнесе. Колл-центр, найм, чат-боты – все в одном месте.",
+  description:
+    "Ваш технологичный партнёр в бизнесе. Колл-центр, найм, чат-боты – все в одном месте.",
+});
+
+definePageMeta({
+  currentService: "Набор персонала",
 });
 </script>
 
@@ -61,7 +66,7 @@ useHead({
       ]"
     />
 
-    <section-why-us-1
+    <section-why-us-3
       class="mt-8"
       :reasons="[
         '5 лет опыта в области рекрутинга',
@@ -70,7 +75,7 @@ useHead({
       ]"
     >
       <template #title>Почему стоит выбрать нас?</template>
-    </section-why-us-1>
+    </section-why-us-3>
 
     <section-pricing-1 :tariffs="prices.recruiting" />
 

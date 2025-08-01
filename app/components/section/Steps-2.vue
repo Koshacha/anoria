@@ -15,7 +15,7 @@ defineProps<{
         <template #chip>Как мы работаем</template>
         Процесс работы
       </app-heading>
-      <div class="grid gap-8 row-gap-0 lg:grid-cols-3">
+      <div class="grid gap-8 row-gap-0 md:grid-cols-3">
         <div
           v-for="(step, index) in steps"
           :key="index"
@@ -37,10 +37,10 @@ defineProps<{
           </p>
           <div
             v-if="index < steps.length - 1"
-            class="top-0 right-0 flex items-center justify-center h-24 lg:-mr-8 lg:absolute"
+            class="top-0 right-0 flex items-center justify-center h-24 md:-mr-8 md:absolute"
           >
             <svg
-              class="w-8 text-gray-400 transform rotate-90 lg:rotate-0"
+              class="w-8 text-gray-400 transform rotate-90 md:rotate-0"
               stroke="currentColor"
               stroke-width="2"
               stroke-linecap="round"

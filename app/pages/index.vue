@@ -1,5 +1,5 @@
 <script setup lang="ts">
-useHead({
+useSeoMeta({
   title: "Anvoria – главная страница",
   description:
     "Ваш технологичный партнёр в бизнесе. Колл-центр, найм, чат-боты – все в одном месте.",

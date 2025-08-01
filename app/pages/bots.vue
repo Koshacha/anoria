@@ -1,9 +1,14 @@
 <script setup lang="ts">
 const { prices } = useAppConfig();
 
-useHead({
+useSeoMeta({
   title: "Anvoria – чат-боты",
-  description: "Ваш технологичный партнёр в бизнесе. Колл-центр, найм, чат-боты – все в одном месте.",
+  description:
+    "Ваш технологичный партнёр в бизнесе. Колл-центр, найм, чат-боты – все в одном месте.",
+});
+
+definePageMeta({
+  currentService: "Чат-боты",
 });
 </script>
 

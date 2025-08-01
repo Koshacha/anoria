@@ -3,7 +3,17 @@ import { useForm } from "vee-validate";
 import { toTypedSchema } from "@vee-validate/zod";
 import { zodSchema } from "#shared/validators/lead";
 
+const route = useRoute();
+
+const service = computed(() => {
+  return route.meta.currentService ?? "";
+});
+
 const validationSchema = toTypedSchema(zodSchema);
+
+const { tariff = "" } = defineProps<{
+  tariff?: string;
+}>();
 
 const { handleSubmit, errors, defineField } = useForm({
   validationSchema,
@@ -24,7 +34,11 @@ const onSubmit = handleSubmit(async (values) => {
   try {
     const response = await $fetch("/api/leads", {
       method: "POST",
-      body: values,
+      body: {
+        ...values,
+        service,
+        tariff,
+      },
     });
     console.log(response);
   } catch (error) {
@@ -35,6 +49,13 @@ const onSubmit = handleSubmit(async (values) => {
 
 <template>
   <div class="space-y-6">
+    <p v-if="service" class="text-gray-400 text-sm my-2">
+      Выбранная услуга: <span class="font-bold">{{ service }}</span
+      ><template v-if="tariff"
+        >, тариф:
+        <span class="font-bold">{{ tariff }}</span>
+      </template>
+    </p>
     <form @submit="onSubmit">
       <input
         v-model="honeypot"

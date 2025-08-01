@@ -64,7 +64,7 @@ defineProps<{
                 <span>{{ feature }}</span>
               </li>
             </ul>
-            <form-modal>
+            <form-modal :tariff="tariff.name">
               <template #default="{ openModal }">
                 <app-button
                   @click="openModal()"

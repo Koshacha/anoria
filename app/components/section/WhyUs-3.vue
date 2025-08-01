@@ -7,11 +7,11 @@ defineProps<{
 <template>
   <section class="gradiente w-full">
     <app-container>
-      <div class="text-gray-50 py-16 lg:py-20">
+      <div class="text-gray-50 py-16 md:py-20">
         <app-heading class="text-shadow-lg">
           <slot name="title" />
         </app-heading>
-        <div class="grid gap-8 row-gap-8 lg:grid-cols-3">
+        <div class="grid gap-8 row-gap-8 md:grid-cols-3">
           <div v-for="(reason, index) in reasons" :key="index">
             <div class="max-sm:flex items-center justify-center">
               <span
