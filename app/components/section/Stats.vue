@@ -41,7 +41,9 @@ const statsCalculated = computed(() => {
       >
         <div class="lg:col-span-8">
           <div class="lg:pe-6 xl:pe-12">
-            <p class="text-6xl md:text-8xl font-bold leading-10 text-blue-600">
+            <p
+              class="text-6xl md:text-8xl font-bold leading-10 text-blue-600 tabular-nums"
+            >
               <animated-number
                 :from="mainStat.value"
                 :to="mainStatCurrentValue"
@@ -56,7 +58,7 @@ const statsCalculated = computed(() => {
             class="grid gap-6 grid-cols-2 md:grid-cols-3 lg:grid-cols-2 sm:gap-8"
           >
             <div v-for="(stat, index) in statsCalculated" :key="index">
-              <p class="text-3xl font-semibold text-blue-600">
+              <p class="text-3xl font-semibold text-blue-600 tabular-nums">
                 <animated-number :from="stat.value" :to="stat.todayValue" />
               </p>
               <p class="mt-1 text-gray-500">{{ stat.label }}</p>

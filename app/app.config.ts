@@ -2,7 +2,10 @@ export default defineAppConfig({
   contacts: {
     phone: "+7 (914) 175-45-90",
     email: "anvoria@mail.ru",
-    address: "Хабаровск, ул. Тургенева 96, корп 1, 18",
+    addresses: [
+      "Хабаровск, ул. Тургенева 96, корп 1, 18",
+      "Москва, ул. Октабрьская 98, п. 331",
+    ],
   },
 
   baseDate: "2025-07-28",

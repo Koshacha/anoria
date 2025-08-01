@@ -13,7 +13,7 @@ const carouselProps = {
       itemsToShow: 3,
     },
   },
-  autoplay: 2000,
+  autoplay: 4000,
   wrapAround: true,
   pauseAutoplayOnHover: true,
 };
@@ -28,7 +28,7 @@ const carouselProps = {
         </nuxt-slide>
 
         <template #addons>
-          <nuxt-pagination />
+          <nuxt-navigation />
         </template>
       </nuxt-carousel>
     </app-container>
@@ -42,5 +42,32 @@ const carouselProps = {
 
 .carousel__viewport {
   padding-bottom: 15px;
+}
+
+.carousel__prev,
+.carousel__next {
+  background-color: #3b82f6;
+  border-radius: 100%;
+  color: white;
+  width: 2rem; 
+  height: 2rem;
+  transition: background-color 0.2s;
+}
+
+@media (width < 768px) {
+  .carousel__prev,
+  .carousel__next {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+}
+
+.carousel__prev:hover,
+.carousel__next:hover {
+  background-color: #2563eb; /* Более темный оттенок для hover-эффекта */
+}
+
+.carousel__icon {
+  color: white;
 }
 </style>

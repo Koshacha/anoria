@@ -13,7 +13,13 @@ const { from, to } = defineProps<{
 }>();
 
 const count = useMotionValue(from);
-const rounded = useTransform(() => Math.round(count.get()));
+const rounded = useTransform(count, (v) => Math.round(v));
+const formatted = useTransform(rounded, (v) =>
+  v.toLocaleString("ru-RU", {
+    minimumFractionDigits: 0,
+    maximumFractionDigits: 0,
+  })
+);
 
 let controls: AnimationPlaybackControlsWithThen;
 
@@ -35,5 +41,5 @@ watch(
 </script>
 
 <template>
-  <RowValue :value="rounded" />
+  <RowValue :value="formatted" />
 </template>
