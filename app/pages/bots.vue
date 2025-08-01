@@ -59,7 +59,7 @@ useHead({
       ]"
     />
 
-    <section-steps
+    <section-steps-2
       :steps="[
         {
           title: 'Формируем предложение под ваш запрос',
@@ -79,7 +79,7 @@ useHead({
       ]"
     />
 
-    <section-why-us-1
+    <section-why-us-3
       class="mt-8"
       :reasons="[
         'Большой опыт внедрения ботов',
@@ -88,7 +88,7 @@ useHead({
       ]"
     >
       <template #title>Почему стоит выбрать нас?</template>
-    </section-why-us-1>
+    </section-why-us-3>
 
     <section-pricing-1 :tariffs="prices.bots" />
 

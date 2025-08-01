@@ -20,7 +20,7 @@ const carouselProps = {
 </script>
 
 <template>
-  <section id="testimonials" class="my-16">
+  <section id="testimonials" class="mb-8 lg:mb-16">
     <app-container>
       <nuxt-carousel v-bind="carouselProps">
         <nuxt-slide v-for="(item, index) in data" :key="index">

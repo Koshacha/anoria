@@ -36,7 +36,7 @@ useHead({
       </template>
     </section-hero-1>
 
-    <section-steps
+    <section-steps-2
       :steps="[
         {
           title: 'Знакомство',

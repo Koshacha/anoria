@@ -1,7 +1,8 @@
 <script setup lang="ts">
 useHead({
   title: "Anvoria – главная страница",
-  description: "Ваш технологичный партнёр в бизнесе. Колл-центр, найм, чат-боты – все в одном месте.",
+  description:
+    "Ваш технологичный партнёр в бизнесе. Колл-центр, найм, чат-боты – все в одном месте.",
 });
 </script>
 
@@ -41,23 +42,19 @@ useHead({
       ]"
     />
 
-    <app-container>
-      <div class="grid grid-cols-1 md:grid-cols-2">
-      <div>
-        <section-why-us-1
-          :reasons="[
-            'Индивидуальный подход',
-            'Опытные специалисты',
-            'Современные технологии',
-          ]"
-        >
-          <template #title>Почему выбирают <fancy-word>Anvoria</fancy-word>?</template>
-        </section-why-us-1>
-      </div>
+    <section-why-us-3
+      :reasons="[
+        'Индивидуальный подход',
+        'Многолетний опыт',
+        'Современные технологии',
+      ]"
+    >
+      <template #title
+        >Почему выбирают <fancy-word>Anvoria</fancy-word>?</template
+      >
+    </section-why-us-3>
 
-      <section-stats />
-    </div>
-    </app-container>
+    <section-stats />
 
     <section-testimonials />
     <section-get-in-touch />

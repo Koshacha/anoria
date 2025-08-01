@@ -9,7 +9,7 @@ defineProps<{
 </script>
 
 <template>
-  <section id="why-us">
+  <section id="why-us" class="mb-8 md:mb-16">
     <app-container>
       <app-heading>
         <template #chip>Как мы работаем</template>

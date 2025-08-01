@@ -14,7 +14,7 @@ defineProps<{
     <app-container>
       <app-heading>
         <template #chip>
-          <nuxt-link to="/tariffs" class="border border-gray-200 bg-gray-100 rounded-3xl px-4 py-2 shadow-sm"> Цены </nuxt-link>
+          <nuxt-link to="/tariffs" class="border border-gray-200/50 rounded-3xl px-4 py-2"> Цены </nuxt-link>
         </template>
         Наши тарифы
       </app-heading>
