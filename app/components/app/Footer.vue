@@ -60,10 +60,10 @@ const currentYear = new Date().getFullYear();
 
             <li>
               <nuxt-link
-                to="/agreement"
+                to="/tariffs"
                 class="text-gray-500 transition hover:opacity-75"
               >
-                Согласие на обработку персональных данных
+                Тарифы
               </nuxt-link>
             </li>
           </ul>

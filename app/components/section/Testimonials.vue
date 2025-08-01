@@ -42,6 +42,7 @@ const carouselProps = {
 
 .carousel__viewport {
   padding-bottom: 15px;
+  cursor: grab;
 }
 
 .carousel__prev,
