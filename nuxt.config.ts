@@ -10,7 +10,7 @@ export default defineNuxtConfig({
     "@nuxt/image",
     "@nuxt/scripts",
     "@nuxtjs/tailwindcss",
-    // 'nuxt-mongoose'
+    "nuxt-mongoose",
     "motion-v/nuxt",
     "vue3-carousel-nuxt",
     "@vee-validate/nuxt",
@@ -76,7 +76,7 @@ export default defineNuxtConfig({
     },
   },
 
-  // mongoose: {
-  //   uri: process.env.MONGO_URI
-  // }
+  mongoose: {
+    uri: process.env.MONGO_URI,
+  },
 });
