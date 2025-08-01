@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { useForm } from "vee-validate";
 import { toTypedSchema } from "@vee-validate/zod";
+import isMobilePhone from 'validator/es/lib/isMobilePhone';
 import * as z from "zod";
 
 const required = z.string("Это поле обязательно");
@@ -8,13 +9,15 @@ const required = z.string("Это поле обязательно");
 const validationSchema = toTypedSchema(
   z.object({
     name: required,
-    phone: required,
+    phone: required.refine(isMobilePhone, {
+      message: "Неверный формат телефона",
+    }),
     email: z.email("Неверный формат email"),
     message: required,
     privacyPolicy: z.boolean().refine((value) => value, {
       message: "Вы должны согласиться с политикой конфиденциальности",
     }),
-    "something-about-bees": z.string().max(0),
+    aboutBumblebees: z.string().max(0),
   })
 );
 
@@ -22,12 +25,12 @@ const { handleSubmit, errors, defineField } = useForm({
   validationSchema,
   initialValues: {
     privacyPolicy: true,
-    "something-about-bees": "",
+    aboutBumblebees: "",
   },
 });
 
 const [name, nameAttrs] = defineField("name");
-const [honeypot, honeypotAttrs] = defineField("something-about-bees");
+const [honeypot, honeypotAttrs] = defineField("aboutBumblebees");
 const [phone, phoneAttrs] = defineField("phone");
 const [email, emailAttrs] = defineField("email");
 const [message, messageAttrs] = defineField("message");
@@ -72,7 +75,6 @@ const onSubmit = handleSubmit(async (values) => {
           <form-label> Телефон </form-label>
           <form-input
             v-model="phone"
-            v-phone
             type="tel"
             placeholder="Номер телефона"
             v-bind="phoneAttrs"

@@ -61,7 +61,7 @@ const { phoneLink, emailLink, phone, email, address } = useContacts();
               </div>
 
               <div>
-                <LazyYandexMap hydrate-on-visible />
+                <lazy-yandex-map hydrate-on-visible />
               </div>
             </div>
           </div>
