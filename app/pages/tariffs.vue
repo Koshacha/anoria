@@ -16,60 +16,233 @@ definePageMeta({
       Тарифы
       <template #subtitle
         >Последнее обновление страницы
-        <time datetime="2025-08-01">01.08.2025</time></template
+        <time datetime="2025-08-02">02.08.2025</time></template
       >
     </app-heading>
+
+    <h2 id="call-center">Колл-центр</h2>
+    <p>Тарифы на услуги колл-центра Anvoria</p>
+    <app-table :headers="['Тариф', 'Базовый', 'Оптимум', 'Премиум']">
+      <tr>
+        <td>Количество звонков</td>
+        <td>до 500 входящих в месяц</td>
+        <td>до 1500 входящих</td>
+        <td>до 5000 входящих</td>
+      </tr>
+      <tr>
+        <td>Скрипты</td>
+        <td>От заказчика</td>
+        <td>Помощь в разработке</td>
+        <td>Индивидуальная разработка</td>
+      </tr>
+      <tr>
+        <td>Отчетность</td>
+        <td>1 раз в неделю</td>
+        <td>Еженедельно</td>
+        <td>Ежедневно</td>
+      </tr>
+      <tr>
+        <td>Цена</td>
+        <td>от 15 000 ₽/мес</td>
+        <td>от 25 000 ₽/мес</td>
+        <td>от 60 000 ₽/мес</td>
+      </tr>
+    </app-table>
+
+    <h3 id="call-center-details">Дополнительные услуги колл-центра Anvoria</h3>
+    <app-table :headers="['Услуга', 'Описание', 'Пример стоимости (от)']">
+      <tr>
+        <td>Индивидуальный скрипт под бизнес</td>
+        <td>
+          Разработка уникального скрипта звонка (входящего/исходящего) под
+          клиента. Включает логику, варианты ответов и работу с возражениями.
+        </td>
+        <td>от 5000 ₽</td>
+      </tr>
+      <tr>
+        <td>Интеграция с CRM клиента</td>
+        <td>
+          Настройка автоматической передачи данных (лидов, заявок, звонков) в
+          AmoCRM, Bitrix24 и др.
+        </td>
+        <td>от 10000 ₽</td>
+      </tr>
+      <tr>
+        <td>Аналитика звонков и отчётность</td>
+        <td>
+          Регулярная аналитика: показатели эффективности, качество обработки,
+          конверсия, источники звонков и др.
+        </td>
+        <td>от 5 000 ₽ в мес.</td>
+      </tr>
+      <tr>
+        <td>Мониторинг качества (QC)</td>
+        <td>
+          Прослушка и разбор звонков, составление отчёта и рекомендаций по
+          улучшению.
+        </td>
+        <td>1 000 ₽ / 10 звонков (не более 10 минут)</td>
+      </tr>
+      <tr>
+        <td>Настройка телефонии под клиента</td>
+        <td>
+          Внедрение IP-телефонии, подключение SIP-номеров, подмена номеров,
+          запись разговоров, сквозная аналитика.
+        </td>
+        <td>от 10 000 ₽</td>
+      </tr>
+      <tr>
+        <td>Обработка чатов и соцсетей</td>
+        <td>
+          Подключение и ведение клиентских диалогов из Telegram, WhatsApp, VK и
+          сайта.
+        </td>
+        <td>от 10 000 ₽ в мес.</td>
+      </tr>
+      <tr>
+        <td>Обзвон по базе (исходящие звонки)</td>
+        <td>
+          Холодные/тёплые обзвоны: продажи, подтверждение заказов, опросы и пр.
+        </td>
+        <td>от 30 ₽ / звонок</td>
+      </tr>
+      <tr>
+        <td>Виртуальный секретарь</td>
+        <td>
+          Приём звонков с индивидуальным представлением от имени компании.
+        </td>
+        <td>от 15 000 ₽ / мес.</td>
+      </tr>
+    </app-table>
     <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil
-      exercitationem et aspernatur modi laboriosam atque mollitia voluptatum?
-      Totam voluptatibus, delectus temporibus voluptate eveniet fuga aliquam?
-      Quidem, qui dolorum eveniet eum minima inventore, unde distinctio quos
-      fuga voluptas ea aliquid itaque sint fugit, quia nostrum amet quo quas
-      consectetur a enim illo dicta at quis! Eius nam iste explicabo.
-      Recusandae, id voluptates atque alias ab eligendi iusto pariatur repellat
-      dignissimos eos provident officiis totam minima! Sit, obcaecati quam porro
-      dignissimos quae molestias asperiores magnam amet sed dolorum perferendis
-      sunt molestiae saepe, rerum minus iusto, in cum corrupti sint sapiente
-      odio ad.
+      Стоимость тарифов является ориентировочной и рассчитывается индивидуально
+      на основе конкретных требований и объёма работ.
     </p>
+
+    <h2 id="recruiting">Набор сотрудников</h2>
+    <p>Тарифы по подбору персонала (для лендинга)</p>
+    <app-table :headers="['Тариф', 'Базовый', 'Оптимум', 'Премиум']">
+      <tr>
+        <td>Формат работы</td>
+        <td>Передача лидов</td>
+        <td>Тёплый кандидат (предквалификация)</td>
+        <td>Подбор под ключ</td>
+      </tr>
+      <tr>
+        <td>Подходит для</td>
+        <td>Массовый и линейный персонал (курьеры, кассиры)</td>
+        <td>Офис, склады, продавцы-консультанты</td>
+        <td>Специалисты, маркетинг, финансы, IT</td>
+      </tr>
+      <tr>
+        <td>Скорость подбора</td>
+        <td>1–2 дня</td>
+        <td>2–5 дней</td>
+        <td>7–21 день</td>
+      </tr>
+      <tr>
+        <td>Гарантия</td>
+        <td>Без гарантии</td>
+        <td>Замена 5–7 дней</td>
+        <td>Замена 14–30 дней</td>
+      </tr>
+      <tr>
+        <td>Проверка кандидатов</td>
+        <td>Нет</td>
+        <td>Телефонная верификация</td>
+        <td>Полное интервью, тестовые задания</td>
+      </tr>
+      <tr>
+        <td>Стоимость</td>
+        <td>от 300 ₽ / лид</td>
+        <td>от 3000 ₽ / кандидат</td>
+        <td>от 25 000 ₽ / выход</td>
+      </tr>
+      <tr>
+        <td>Отчётность</td>
+        <td>—</td>
+        <td>Еженедельная аналитика</td>
+        <td>Еженедельная аналитика</td>
+      </tr>
+      <tr>
+        <td>Условия оплаты</td>
+        <td>100% предоплата</td>
+        <td>50/50 или после контакта</td>
+        <td>После выхода / по этапам</td>
+      </tr>
+    </app-table>
     <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil
-      exercitationem et aspernatur modi laboriosam atque mollitia voluptatum?
-      Totam voluptatibus, delectus temporibus voluptate eveniet fuga aliquam?
-      Quidem, qui dolorum eveniet eum minima inventore, unde distinctio quos
-      fuga voluptas ea aliquid itaque sint fugit, quia nostrum amet quo quas
-      consectetur a enim illo dicta at quis! Eius nam iste explicabo.
-      Recusandae, id voluptates atque alias ab eligendi iusto pariatur repellat
-      dignissimos eos provident officiis totam minima! Sit, obcaecati quam porro
-      dignissimos quae molestias asperiores magnam amet sed dolorum perferendis
-      sunt molestiae saepe, rerum minus iusto, in cum corrupti sint sapiente
-      odio ad.
+      Стоимость тарифов является ориентировочной и рассчитывается индивидуально
+      на основе конкретных требований и объёма работ.
     </p>
+
+    <h2 id="bots">Чат-боты</h2>
+    <p>Тарифы на создание и внедрение чат-ботов</p>
+    <app-table :headers="['Тариф', 'Базовый', 'Оптимум', 'Премиум']">
+      <tr>
+        <td>Стоимость</td>
+        <td>10 000 ₽</td>
+        <td>30 000 ₽</td>
+        <td>65 000 ₽</td>
+      </tr>
+      <tr>
+        <td>Платформа</td>
+        <td>Telegram или ВКонтакте</td>
+        <td>Telegram / VK / WhatsApp / Сайт</td>
+        <td>Любые мессенджеры + CRM / API</td>
+      </tr>
+      <tr>
+        <td>Функционал</td>
+        <td>Простой FAQ-бот</td>
+        <td>Воронки, захват заявок, автоответы</td>
+        <td>Умный бот с ИИ, персонализацией и логикой продаж</td>
+      </tr>
+      <tr>
+        <td>Количество сценариев</td>
+        <td>до 5</td>
+        <td>до 20</td>
+        <td>неограниченно</td>
+      </tr>
+      <tr>
+        <td>Интеграции</td>
+        <td>Без интеграций</td>
+        <td>Интеграция с CRM, Google Sheets, CMS</td>
+        <td>Сложные интеграции (1С, AmoCRM, Bitrix, API и др.)</td>
+      </tr>
+      <tr>
+        <td>Срок запуска</td>
+        <td>3–5 рабочих дней</td>
+        <td>7–10 рабочих дней</td>
+        <td>от 14 рабочих дней</td>
+      </tr>
+      <tr>
+        <td>Поддержка</td>
+        <td>7 дней</td>
+        <td>1 месяц</td>
+        <td>3 месяца</td>
+      </tr>
+    </app-table>
     <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil
-      exercitationem et aspernatur modi laboriosam atque mollitia voluptatum?
-      Totam voluptatibus, delectus temporibus voluptate eveniet fuga aliquam?
-      Quidem, qui dolorum eveniet eum minima inventore, unde distinctio quos
-      fuga voluptas ea aliquid itaque sint fugit, quia nostrum amet quo quas
-      consectetur a enim illo dicta at quis! Eius nam iste explicabo.
-      Recusandae, id voluptates atque alias ab eligendi iusto pariatur repellat
-      dignissimos eos provident officiis totam minima! Sit, obcaecati quam porro
-      dignissimos quae molestias asperiores magnam amet sed dolorum perferendis
-      sunt molestiae saepe, rerum minus iusto, in cum corrupti sint sapiente
-      odio ad.
-    </p>
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil
-      exercitationem et aspernatur modi laboriosam atque mollitia voluptatum?
-      Totam voluptatibus, delectus temporibus voluptate eveniet fuga aliquam?
-      Quidem, qui dolorum eveniet eum minima inventore, unde distinctio quos
-      fuga voluptas ea aliquid itaque sint fugit, quia nostrum amet quo quas
-      consectetur a enim illo dicta at quis! Eius nam iste explicabo.
-      Recusandae, id voluptates atque alias ab eligendi iusto pariatur repellat
-      dignissimos eos provident officiis totam minima! Sit, obcaecati quam porro
-      dignissimos quae molestias asperiores magnam amet sed dolorum perferendis
-      sunt molestiae saepe, rerum minus iusto, in cum corrupti sint sapiente
-      odio ad.
+      Стоимость тарифов является ориентировочной и рассчитывается индивидуально
+      на основе конкретных требований и объёма работ.
     </p>
   </div>
 </template>
+
+<style scoped>
+h2 {
+  @apply text-2xl font-bold mt-8 mb-4;
+}
+
+h3 {
+  @apply text-xl font-bold mt-6 mb-2;
+}
+
+p {
+  @apply mb-4;
+}
+
+td {
+  @apply px-4 py-2 text-gray-700;
+}
+</style>

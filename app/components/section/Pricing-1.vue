@@ -14,7 +14,12 @@ defineProps<{
     <app-container>
       <app-heading>
         <template #chip>
-          <nuxt-link to="/tariffs" class="border border-gray-200/50 rounded-3xl px-4 py-2"> Цены </nuxt-link>
+          <nuxt-link
+            to="/tariffs"
+            class="border border-gray-200/50 rounded-3xl px-4 py-2"
+          >
+            Цены
+          </nuxt-link>
         </template>
         Наши тарифы
       </app-heading>
@@ -34,9 +39,10 @@ defineProps<{
             <div class="space-y-2" :class="{ 'text-black': index !== 1 }">
               <h4 class="text-2xl font-bold">{{ tariff.name }}</h4>
               <span class="flex flex-wrap items-baseline text-6xl font-bold"
-                >{{ tariff.price.toLocaleString() }}
+                ><span class="text-3xl">от </span>
+                {{ tariff.price.toLocaleString() }}
                 <span class="text-sm tracking-wide">
-                  {{ tariff.forWhat ?? "в месяц" }}</span
+                  {{ tariff.forWhat ?? "в мес." }}</span
                 >
               </span>
             </div>
@@ -64,6 +70,16 @@ defineProps<{
                 <span>{{ feature }}</span>
               </li>
             </ul>
+            <nuxt-link
+              :to="`/tariffs#${tariff.name.toLowerCase()}`"
+              class="flex items-center gap-1 text-sm hover:underline"
+              :class="{
+                'text-white': index === 1,
+                'text-primary': index !== 1,
+              }"
+            >
+              Подробное описание <icon name="lucide:arrow-right" class="w-4 h-4" />
+            </nuxt-link>
             <form-modal :tariff="tariff.name">
               <template #default="{ openModal }">
                 <app-button
