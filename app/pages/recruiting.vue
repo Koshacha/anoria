@@ -32,7 +32,7 @@ definePageMeta({
       </template>
 
       <template #right>
-        <section-why-us-2
+        <!-- <section-why-us-2
           :reasons="[
             'Опытные операторы',
             'Быстрый старт работы',
@@ -40,7 +40,7 @@ definePageMeta({
           ]"
         >
           <template #title>Почему мы?</template>
-        </section-why-us-2>
+        </section-why-us-2> -->
       </template>
     </section-hero-1>
 

@@ -22,7 +22,7 @@
           <slot name="cta" />
         </div>
         <div v-if="$slots.right">
-          <div class="border border-gray-200 rounded-lg">
+          <div>
             <slot name="right" />
           </div>
         </div>
