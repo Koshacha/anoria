@@ -69,7 +69,7 @@ const currentYear = new Date().getFullYear();
           </ul>
 
           <p class="mt-8 text-xs text-gray-500 sm:mt-0">
-            &copy; {{ currentYear }}. Anvoria. Все права защищены.
+            &copy; {{ currentYear }}. ООО «Анвост». Все права защищены.
           </p>
         </div>
       </div>
