@@ -59,7 +59,7 @@ onUnmounted(() => {
               <Icon name="i-heroicons-x-mark" class="h-6 w-6" />
             </button>
           </div>
-          <div class="mt-4 overflow-y-auto">
+          <div class="mt-4 overflow-y-auto px-1">
             <slot name="content" />
           </div>
         </motion.div>
