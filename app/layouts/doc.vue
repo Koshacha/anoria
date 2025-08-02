@@ -6,7 +6,7 @@ const print = () => {
 
 <template>
   <div class="flex flex-col min-h-screen">
-    <header class="bg-gray-200 border-b border-gray-300 print:hidden">
+    <header class="bg-gray-200 border-b border-gray-300 print:hidden sticky top-0">
       <app-container>
         <div class="flex justify-start items-center py-4 space-x-4 w-full">
           <button

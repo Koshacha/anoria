@@ -230,6 +230,10 @@ definePageMeta({
 </template>
 
 <style scoped>
+[id] {
+  scroll-margin-top: 80px;
+}
+
 h2 {
   @apply text-2xl font-bold mt-8 mb-4;
 }

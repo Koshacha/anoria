@@ -1,5 +1,6 @@
 <script setup lang="ts">
 defineProps<{
+  service: string,
   tariffs: {
     name: string;
     forWhat?: string;
@@ -71,7 +72,7 @@ defineProps<{
               </li>
             </ul>
             <nuxt-link
-              :to="`/tariffs#${tariff.name.toLowerCase()}`"
+              :to="`/tariffs#${service}`"
               class="flex items-center gap-1 text-sm hover:underline"
               :class="{
                 'text-white': index === 1,

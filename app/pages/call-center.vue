@@ -61,7 +61,7 @@ definePageMeta({
       ]"
     />
 
-    <section-pricing-1 :tariffs="prices.callCenter" />
+    <section-pricing-1 service="call-center" :tariffs="prices.callCenter" />
 
     <section-get-in-touch />
   </div>

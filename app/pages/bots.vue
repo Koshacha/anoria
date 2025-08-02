@@ -95,7 +95,7 @@ definePageMeta({
       <template #title>Почему стоит выбрать нас?</template>
     </section-why-us-3>
 
-    <section-pricing-1 :tariffs="prices.bots" />
+    <section-pricing-1 service="bots" :tariffs="prices.bots" />
 
     <section-get-in-touch />
   </div>

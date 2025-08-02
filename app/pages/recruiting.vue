@@ -77,7 +77,7 @@ definePageMeta({
       <template #title>Почему стоит выбрать нас?</template>
     </section-why-us-3>
 
-    <section-pricing-1 :tariffs="prices.recruiting" />
+    <section-pricing-1 service="recruiting" :tariffs="prices.recruiting" />
 
     <section-get-in-touch />
   </div>
