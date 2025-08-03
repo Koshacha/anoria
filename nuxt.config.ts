@@ -31,6 +31,15 @@ export default defineNuxtConfig({
     prefix: 'nuxt',
   },
 
+  icon: {
+    clientBundle: {
+      scan: {
+        globInclude: ['components/**/*.vue', 'app/components/**/*.vue'],
+        globExclude: ['node_modules', 'dist'],
+      },
+    },
+  },
+
   fonts: {
     families: [
       {
