@@ -1,26 +1,28 @@
 <script setup lang="ts">
 useSeoMeta({
-  title: "Anvoria – тарифы",
+  title: 'Anvoria – тарифы',
   description:
-    "Ваш технологичный партнёр в бизнесе. Колл-центр, найм, чат-боты – все в одном месте.",
-});
+    'Ваш технологичный партнёр в бизнесе. Колл-центр, найм, чат-боты – все в одном месте.',
+})
 
 definePageMeta({
-  layout: "doc",
-});
+  layout: 'doc',
+})
 </script>
 
 <template>
   <div>
     <app-heading>
       Тарифы
-      <template #subtitle
-        >Последнее обновление страницы
-        <time datetime="2025-08-02">02.08.2025</time></template
-      >
+      <template #subtitle>
+        Последнее обновление страницы
+        <time datetime="2025-08-02">02.08.2025</time>
+      </template>
     </app-heading>
 
-    <h2 id="call-center">Колл-центр</h2>
+    <h2 id="call-center">
+      Колл-центр
+    </h2>
     <p>Тарифы на услуги колл-центра Anvoria</p>
     <app-table :headers="['Тариф', 'Базовый', 'Оптимум', 'Премиум']">
       <tr>
@@ -49,7 +51,9 @@ definePageMeta({
       </tr>
     </app-table>
 
-    <h3 id="call-center-details">Дополнительные услуги колл-центра Anvoria</h3>
+    <h3 id="call-center-details">
+      Дополнительные услуги колл-центра Anvoria
+    </h3>
     <app-table :headers="['Услуга', 'Описание', 'Пример стоимости (от)']">
       <tr>
         <td>Индивидуальный скрипт под бизнес</td>
@@ -119,8 +123,10 @@ definePageMeta({
       на основе конкретных требований и объёма работ.
     </p>
 
-    <h2 id="recruiting">Набор сотрудников</h2>
-    <p>Тарифы по подбору персонала (для лендинга)</p>
+    <h2 id="recruiting">
+      Набор сотрудников
+    </h2>
+    <p>Тарифы по подбору персонала</p>
     <app-table :headers="['Тариф', 'Базовый', 'Оптимум', 'Премиум']">
       <tr>
         <td>Формат работы</td>
@@ -176,7 +182,9 @@ definePageMeta({
       на основе конкретных требований и объёма работ.
     </p>
 
-    <h2 id="bots">Чат-боты</h2>
+    <h2 id="bots">
+      Чат-боты
+    </h2>
     <p>Тарифы на создание и внедрение чат-ботов</p>
     <app-table :headers="['Тариф', 'Базовый', 'Оптимум', 'Премиум']">
       <tr>
@@ -187,7 +195,7 @@ definePageMeta({
       </tr>
       <tr>
         <td>Платформа</td>
-        <td>Telegram или ВКонтакте</td>
+        <td>Telegram / ВКонтакте</td>
         <td>Telegram / VK / WhatsApp / Сайт</td>
         <td>Любые мессенджеры + CRM / API</td>
       </tr>

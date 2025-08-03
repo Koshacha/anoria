@@ -61,6 +61,17 @@ definePageMeta({
       ]"
     />
 
+    <section-why-us-3
+      class="mt-8"
+      :reasons="[
+        'Опытные операторы',
+        'Быстрый старт работы',
+        'Контроль качества'
+      ]"
+    >
+      <template #title>Почему мы?</template>
+    </section-why-us-3>
+
     <section-pricing-1 service="call-center" :tariffs="prices.callCenter" />
 
     <section-get-in-touch />
