@@ -90,7 +90,7 @@ export default defineNuxtConfig({
   },
 
   runtimeConfig: {
-    botToken: '',
-    chatId: '',
+    botToken: process.env.NUXT_BOT_TOKEN,
+    chatId: process.env.NUXT_CHAT_ID,
   },
 })
