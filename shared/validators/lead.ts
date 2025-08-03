@@ -14,6 +14,8 @@ export const zodSchema = z.object({
     message: "Вы должны согласиться с политикой конфиденциальности",
   }),
   aboutBumblebees: z.string().max(0),
+  service: z.string().optional(),
+  tariff: z.string().optional(),
 });
 
 export type Lead = z.infer<typeof zodSchema>;

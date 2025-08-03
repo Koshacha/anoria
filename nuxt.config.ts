@@ -79,4 +79,11 @@ export default defineNuxtConfig({
   mongoose: {
     uri: process.env.MONGO_URI,
   },
+
+  runtimeConfig: {
+    telegram: {
+      botToken: process.env.NUXT_BOT_TOKEN,
+      chatId: process.env.NUXT_CHAT_ID,
+    },
+  },
 })
