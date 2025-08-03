@@ -90,9 +90,7 @@ export default defineNuxtConfig({
   },
 
   runtimeConfig: {
-    telegram: {
-      botToken: process.env.NUXT_BOT_TOKEN,
-      chatId: process.env.NUXT_CHAT_ID,
-    },
+    botToken: '',
+    chatId: '',
   },
 })

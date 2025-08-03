@@ -3,18 +3,21 @@ import TelegramBot from 'node-telegram-bot-api'
 export default defineNitroPlugin((nitroApp) => {
   const config = useRuntimeConfig();
 
-  if (!config.telegram.botToken) {
+  if (!config.botToken) {
     // eslint-disable-next-line no-console
     console.warn('Telegram bot token is not defined.');
     nitroApp.$telegram = null;
     return;
   }
 
-  const bot = new TelegramBot(config.telegram.botToken)
+  const bot = new TelegramBot(config.botToken)
 
   const telegram = {
     send: async (message: string, chatId?: string) => {
-      const _chatId = chatId || config.telegram.chatId;
+      const _chatId = chatId || config.chatId;
+
+
+      console.log(config.botToken, message, _chatId);
 
       if (!_chatId) {
         // eslint-disable-next-line no-console
