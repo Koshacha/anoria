@@ -16,9 +16,6 @@ export default defineNitroPlugin((nitroApp) => {
     send: async (message: string, chatId?: string) => {
       const _chatId = chatId || config.chatId;
 
-
-      console.log(config.botToken, message, _chatId);
-
       if (!_chatId) {
         // eslint-disable-next-line no-console
         console.warn('Telegram chat id is not defined.')
