@@ -41,7 +41,7 @@ defineProps<{
               <h4 class="text-2xl font-bold">{{ tariff.name }}</h4>
               <span class="flex flex-wrap items-baseline text-6xl font-bold"
                 ><span class="text-3xl mr-2">от </span>
-                {{ tariff.price.toLocaleString() }}
+                {{ tariff.price.toLocaleString('ru-RU') }}
                 <span class="text-sm tracking-wide">
                   {{ tariff.forWhat ?? "в мес." }}</span
                 >
