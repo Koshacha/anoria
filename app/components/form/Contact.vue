@@ -61,14 +61,14 @@ const onSubmit = handleSubmit(async (values) => {
 
 <template>
   <div class="space-y-6">
-    <app-alert v-if="formStatus === 'success'" type="success">
+    <lazy-app-alert v-if="formStatus === 'success'" type="success">
       <p class="font-semibold">Ваша заявка успешно отправлена!</p>
       <p class="text-sm">Мы свяжемся с вами в ближайшее время.</p>
-    </app-alert>
-    <app-alert v-else-if="formStatus === 'error'" type="error">
+    </lazy-app-alert>
+    <lazy-app-alert v-else-if="formStatus === 'error'" type="error">
       <p class="font-semibold">Произошла ошибка</p>
       <p class="text-sm">Пожалуйста, попробуйте еще раз позже.</p>
-    </app-alert>
+    </lazy-app-alert>
 
     <p
       v-if="service && formStatus !== 'success'"
