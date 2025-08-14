@@ -41,7 +41,7 @@ const arrowIcon = computed(() =>
               >
                 <icon
                   :name="step.icon ?? 'lucide:check'"
-                  class="w-12 h-12 text-primary sm:w-14 sm:h-14"
+                  class="size-10 md:size-12 text-primary"
                 />
               </div>
               <h6 class="mb-2 text-2xl font-extrabold text-balance">
