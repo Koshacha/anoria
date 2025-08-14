@@ -15,6 +15,7 @@ export default defineNuxtConfig({
     'vue3-carousel-nuxt',
     '@vee-validate/nuxt',
     '@vueuse/nuxt',
+    'nuxt-yandex-metrika',
   ],
 
   css: ['~/assets/css/main.css'],
@@ -29,6 +30,17 @@ export default defineNuxtConfig({
 
   carousel: {
     prefix: 'nuxt',
+  },
+
+  yandexMetrika: {
+    id: process.env.NUXT_PUBLIC_YANDEX_METRIKA_ID,
+    options: {
+      webvisor: true,
+      clickmap: true,
+      ecommerce: 'dataLayer',
+      accurateTrackBounce: true,
+      trackLinks: true,
+    },
   },
 
   icon: {

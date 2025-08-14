@@ -40,6 +40,7 @@
     "@vee-validate/nuxt": "^4.15.1",
     "@vueuse/nuxt": "^13.6.0",
     "eslint": "^9.32.0",
-    "nuxt-mongoose": "^1.0.6"
+    "nuxt-mongoose": "^1.0.6",
+    "nuxt-yandex-metrika": "^1.2.9"
   }
 }
