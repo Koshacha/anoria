@@ -30,7 +30,7 @@ const arrowIcon = computed(() =>
         >
         Процесс работы
       </app-heading>
-      <div class="gap-8 row-gap-0 flex flex-col md:flex-row">
+      <div class="gap-8 row-gap-0 flex flex-col md:flex-row items-center justify-center">
         <template v-for="(step, index) in steps" :key="index">
           <div
             class="relative text-center text-gray-900 p-8 bg-white rounded-lg w-full md:max-w-xs shadow-sm"
