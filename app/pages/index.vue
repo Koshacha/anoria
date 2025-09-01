@@ -1,26 +1,46 @@
 <script setup lang="ts">
 useSeoMeta({
-  title: "Anvoria – главная страница",
+  title: 'Anvoria – главная страница',
   description:
-    "Ваш технологичный партнёр в бизнесе. Колл-центр, найм, чат-боты – все в одном месте.",
-});
+    'Ваш технологичный партнёр в бизнесе. Колл-центр, найм, чат-боты – все в одном месте.',
+})
 </script>
 
 <template>
   <div>
     <section-hero-1>
-      <template #title
-        ><fancy-word class="text-primary">Эффективные</fancy-word> решения для
-        вашего бизнеса</template
-      >
+      <template #title>
+        <fancy-word class="text-primary">
+          Эффективные
+        </fancy-word> решения для
+        вашего бизнеса
+      </template>
       <template #description>
-        Ваш технологичный партнёр в бизнесе. <br class="max-sm:hidden" />
+        Ваш технологичный партнёр в бизнесе. <br class="max-sm:hidden">
         Колл-центр, найм, чат-боты – все в одном месте.
       </template>
     </section-hero-1>
 
     <section-services
       :services="[
+        {
+          title: 'Создание сайтов и приложений',
+          description: 'Создаём сайты и приложения под задачи вашего бизнеса',
+          link: '/development',
+          icon: 'material-symbols:code',
+        },
+        {
+          title: 'Поддержка сайтов и приложений',
+          description: 'Осуществляем непрерывную поддержку',
+          link: '/support',
+          icon: 'material-symbols:help-center',
+        },
+        {
+          title: 'Продвижение',
+          description: 'Мы приводим клиентов',
+          link: '/promotion',
+          icon: 'material-symbols:campaign',
+        },
         {
           title: 'Колл-центр',
           description: 'Организация горячих и холодных звонков под ключ',
@@ -49,9 +69,9 @@ useSeoMeta({
         'Современные технологии',
       ]"
     >
-      <template #title
-        >Почему выбирают <fancy-word>Anvoria</fancy-word>?</template
-      >
+      <template #title>
+        Почему выбирают <fancy-word>Anvoria</fancy-word>?
+      </template>
     </section-why-us-3>
 
     <section-stats />
