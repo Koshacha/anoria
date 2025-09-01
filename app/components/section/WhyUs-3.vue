@@ -5,7 +5,7 @@ defineProps<{
 </script>
 
 <template>
-  <section class="py-16 md:py-20">
+  <section id="why-we" class="py-16 md:py-20">
     <app-container>
       <app-heading>
         <slot name="title" />

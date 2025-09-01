@@ -1,23 +1,27 @@
 <script setup lang="ts">
-import { motion, AnimatePresence } from "motion-v";
+import { AnimatePresence, motion } from 'motion-v'
 
 const links = [
-  { href: "/call-center", text: "Колл-центр" },
-  { href: "/recruiting", text: "Набор сотрудников" },
-  { href: "/bots", text: "Чат-боты" },
-];
+  { href: '/development', text: 'Создание сайтов и приложений' },
+  { href: '/support', text: 'Поддержка сайтов и приложений' },
+  { href: '/promotion', text: 'Продвижение' },
+  { href: '/call-center', text: 'Колл-центр' },
+  { href: '/recruiting', text: 'Набор сотрудников' },
+  { href: '/bots', text: 'Чат-боты' },
+  { href: '/tariffs', text: 'Тарифы' },
+]
 
-const isOpen = ref(false);
-const openMenu = () => {
-  isOpen.value = true;
-};
-const closeMenu = () => {
-  isOpen.value = false;
-};
+const isOpen = ref(false)
+function openMenu() {
+  isOpen.value = true
+}
+function closeMenu() {
+  isOpen.value = false
+}
 </script>
 
 <template>
-  <slot name="trigger" :openMenu="openMenu" :closeMenu="closeMenu" />
+  <slot name="trigger" :open-menu="openMenu" :close-menu="closeMenu" />
 
   <Teleport to="body">
     <AnimatePresence>
@@ -41,7 +45,7 @@ const closeMenu = () => {
       >
         <div class="flex justify-between items-center mb-10">
           <app-logo @click="closeMenu" />
-          <button @click="closeMenu" class="text-gray-500 hover:text-gray-800">
+          <button class="text-gray-500 hover:text-gray-800" @click="closeMenu">
             <Icon name="i-heroicons-x-mark" class="h-8 w-8" />
           </button>
         </div>
@@ -60,15 +64,16 @@ const closeMenu = () => {
           <form-modal>
             <template #default="{ openModal }">
               <app-button
+                class="w-full text-center block"
                 @click="
                   () => {
                     openModal();
                     closeMenu();
                   }
                 "
-                class="w-full text-center block"
-                >Оставить заявку</app-button
               >
+                Оставить заявку
+              </app-button>
             </template>
           </form-modal>
         </div>

@@ -1,29 +1,40 @@
 <script setup lang="ts">
-const { prices } = useAppConfig();
+const { prices } = useAppConfig()
 
 useSeoMeta({
-  title: "Anvoria – колл-центр",
+  title: 'Anvoria – колл-центр',
   description:
-    "Ваш технологичный партнёр в бизнесе. Колл-центр, найм, чат-боты – все в одном месте.",
-});
+    'Ваш технологичный партнёр в бизнесе. Колл-центр, найм, чат-боты – все в одном месте.',
+})
 
 definePageMeta({
-  currentService: "Колл-центр",
-});
+  currentService: 'Колл-центр',
+  navigation: [
+    { href: '#why-us', text: 'Как мы работаем' },
+    { href: '#why-we', text: 'Почему мы' },
+    { href: '#prices', text: 'Тарифы' },
+  ],
+})
 </script>
 
 <template>
   <div>
     <section-hero-1>
-      <template #title
-        ><fancy-word class="text-primary">Колл-центр</fancy-word></template
-      >
-      <template #description> Аутсорсинг звонков для компаний. </template>
+      <template #title>
+        <fancy-word class="text-primary">
+          Колл-центр
+        </fancy-word>
+      </template>
+      <template #description>
+        Аутсорсинг звонков для компаний.
+      </template>
 
       <template #cta>
         <form-modal>
           <template #default="{ openModal }">
-            <app-button @click="openModal()"> Оставить заявку </app-button>
+            <app-button @click="openModal()">
+              Оставить заявку
+            </app-button>
           </template>
         </form-modal>
       </template>
@@ -66,10 +77,12 @@ definePageMeta({
       :reasons="[
         'Опытные операторы',
         'Быстрый старт работы',
-        'Контроль качества'
+        'Контроль качества',
       ]"
     >
-      <template #title>Почему мы?</template>
+      <template #title>
+        Почему мы?
+      </template>
     </section-why-us-3>
 
     <section-pricing-1 service="call-center" :tariffs="prices.callCenter" />

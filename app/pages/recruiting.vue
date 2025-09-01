@@ -1,24 +1,31 @@
 <script setup lang="ts">
-const { prices } = useAppConfig();
+const { prices } = useAppConfig()
 
 useSeoMeta({
-  title: "Anvoria – найм",
+  title: 'Anvoria – найм',
   description:
-    "Ваш технологичный партнёр в бизнесе. Колл-центр, найм, чат-боты – все в одном месте.",
-});
+    'Ваш технологичный партнёр в бизнесе. Колл-центр, найм, чат-боты – все в одном месте.',
+})
 
 definePageMeta({
-  currentService: "Набор персонала",
-});
+  currentService: 'Набор персонала',
+  navigation: [
+    { href: '#why-us', text: 'Как мы работаем' },
+    { href: '#why-we', text: 'Почему мы' },
+    { href: '#prices', text: 'Тарифы' },
+  ],
+})
 </script>
 
 <template>
   <div>
     <section-hero-1>
       <template #title>
-        <fancy-word class="text-primary">Подбор</fancy-word>
-        сотрудников</template
-      >
+        <fancy-word class="text-primary">
+          Подбор
+        </fancy-word>
+        сотрудников
+      </template>
       <template #description>
         Быстро найдем сотрудников под ваши требования в короткие сроки.
       </template>
@@ -26,7 +33,9 @@ definePageMeta({
       <template #cta>
         <form-modal>
           <template #default="{ openModal }">
-            <app-button @click="openModal()"> Оставить заявку </app-button>
+            <app-button @click="openModal()">
+              Оставить заявку
+            </app-button>
           </template>
         </form-modal>
       </template>
@@ -74,7 +83,9 @@ definePageMeta({
         'Фокус на результат',
       ]"
     >
-      <template #title>Почему стоит выбрать нас?</template>
+      <template #title>
+        Почему стоит выбрать нас?
+      </template>
     </section-why-us-3>
 
     <section-pricing-1 service="recruiting" :tariffs="prices.recruiting" />

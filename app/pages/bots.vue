@@ -1,15 +1,20 @@
 <script setup lang="ts">
-const { prices } = useAppConfig();
+const { prices } = useAppConfig()
 
 useSeoMeta({
-  title: "Anvoria – чат-боты",
+  title: 'Anvoria – чат-боты',
   description:
-    "Ваш технологичный партнёр в бизнесе. Колл-центр, найм, чат-боты – все в одном месте.",
-});
+    'Ваш технологичный партнёр в бизнесе. Колл-центр, найм, чат-боты – все в одном месте.',
+})
 
 definePageMeta({
-  currentService: "Чат-боты",
-});
+  currentService: 'Чат-боты',
+  navigation: [
+    { href: '#why-us', text: 'Как мы работаем' },
+    { href: '#why-we', text: 'Почему мы' },
+    { href: '#prices', text: 'Тарифы' },
+  ],
+})
 </script>
 
 <template>
@@ -17,8 +22,10 @@ definePageMeta({
     <section-hero-1>
       <template #title>
         Внедрение
-        <fancy-word class="text-primary">чат-ботов</fancy-word></template
-      >
+        <fancy-word class="text-primary">
+          чат-ботов
+        </fancy-word>
+      </template>
       <template #description>
         Создаем и настраиваем чат-боты под ваш бизнес.
       </template>
@@ -26,7 +33,9 @@ definePageMeta({
       <template #cta>
         <form-modal>
           <template #default="{ openModal }">
-            <app-button @click="openModal()"> Оставить заявку </app-button>
+            <app-button @click="openModal()">
+              Оставить заявку
+            </app-button>
           </template>
         </form-modal>
       </template>
@@ -92,7 +101,9 @@ definePageMeta({
         'Скорость запуска',
       ]"
     >
-      <template #title>Почему стоит выбрать нас?</template>
+      <template #title>
+        Почему стоит выбрать нас?
+      </template>
     </section-why-us-3>
 
     <section-pricing-1 service="bots" :tariffs="prices.bots" />

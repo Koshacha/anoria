@@ -9,6 +9,11 @@ useSeoMeta({
 
 definePageMeta({
   currentService: 'Поддержка сайтов и приложений',
+  navigation: [
+    { href: '#why-us', text: 'Как мы работаем' },
+    { href: '#why-we', text: 'Почему мы' },
+    { href: '#prices', text: 'Тарифы' },
+  ],
 })
 </script>
 

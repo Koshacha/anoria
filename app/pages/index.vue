@@ -4,6 +4,14 @@ useSeoMeta({
   description:
     'Ваш технологичный партнёр в бизнесе. Колл-центр, найм, чат-боты – все в одном месте.',
 })
+
+definePageMeta({
+  navigation: [
+    { href: '#services', text: 'Услуги' },
+    { href: '#why-we', text: 'Почему мы' },
+    { href: '#testimonials', text: 'Отзывы' },
+  ],
+})
 </script>
 
 <template>
